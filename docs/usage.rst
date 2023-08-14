@@ -31,6 +31,7 @@ you can use the ``Clock.function()`` function:
 
  :py:func:`SysClock.now()` basic date/time format
  :py:func:`SysClock.today()` more calendar oriented
+
  :py:func:`SysClock.today()` friendlier
 
  :py:func:`object.function`does something
@@ -43,6 +44,9 @@ For example:
 >>> sysclock = SysClock()
 >>> sysclock.now()
 2023-08-14 17:28:11 
+
+>>> robot.sysclock.today()
+Mon Aug 14 2023 17:53:49 EDT
 
 
 
