@@ -1,6 +1,6 @@
 **rtd_sphinx**
 
-basic template for using sphinx theme
-with RTD (Read The Docs)
+basic template for RTD (Read The Docs) using sphinx theme
+
 
 
