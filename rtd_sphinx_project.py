@@ -1,16 +1,19 @@
+#
+# rtd_sphinx_project.py
+#
+# test RTD  project to use for a template
+#
 
-# test name project
 
 """
-
-This is a Python docstring, we can use reStructuredText syntax here!
+minimal RTD sphinx project needs some sort of docstring to build ?
+Python docstring - reStructuredText syntax below
 
 .. code-block:: python
 
-# rtd_sphinx_project.py
-
-   
 """
+
+# REQUIRED:  embedded version equate for module
 
 __version__ = "0.01.01"
 
