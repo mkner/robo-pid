@@ -8,7 +8,7 @@ RTD Sphinx documentation template
 a basic template for creating a RTD sphinx documentation
 that actually builds
 
-see 'Read The Docs <https://www.readthedocs.org/>'
+see 'Read The Docs <https://www.readthedocs.org/>'_
 
 
 Example usage is here :doc:`usage` 
