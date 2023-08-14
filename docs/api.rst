@@ -5,4 +5,4 @@ API
    :toctree: generated
 
    
-   #lumache
+   #was lumache
