@@ -4,6 +4,6 @@ build-backend = "flit_core.buildapi"
 
 [project]
 #name = "rtd_sphinx_project"
-name = "lumanche"
+name = "lumache"
 authors = [{name = "Graziella", email = "graziella@lumache"}]
 dynamic = ["version", "description"]
