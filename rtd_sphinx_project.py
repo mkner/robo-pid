@@ -4,6 +4,7 @@
 # test RTD  project to use for a template
 #
 
+# REQUIRED: some docstring
 
 """
 minimal RTD sphinx project needs some sort of docstring to build ?
