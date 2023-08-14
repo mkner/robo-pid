@@ -1,7 +1,7 @@
 .. include:: ../README.rst
 
 **RTD Sphinx documentation template project**
-#=============================================
+---------------------------------------------
 
 **rtd sphinx project** 
 basic template for creating a RTD sphinx documentation project
