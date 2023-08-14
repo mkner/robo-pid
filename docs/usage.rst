@@ -10,7 +10,7 @@ To use this project, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install roboclocks
+    $ pip install roboclocks
 
 example heading
 ----------------
@@ -29,6 +29,9 @@ you can use the ``Clock.function()`` function:
 .. autofunction:: SysClock.today()
 .. autofunction:: SysClock.date()
 
+ :py:func:`SysClock.now()` basic date/time format
+ :py:func:`SysClock.today()` more calendar oriented
+ :py:func:`SysClock.today()` friendlier
 
  :py:func:`object.function`does something
 
