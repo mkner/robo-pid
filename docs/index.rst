@@ -11,4 +11,4 @@ see <https://www.readthedocs.org/>`
 
 
 Example usage is here :doc:`usage` 
-Example installation is here :ref:
+Example installation is here :ref:`installation` 
