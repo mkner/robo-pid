@@ -1,12 +1,14 @@
 .. include:: ../README.rst
 
-Welcome to Lumache's documentation!
+RTD Sphynx documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**rtd sphinx project** 
+basic template for creating a RTD sphinx documentation project
+that actually builds
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+see <https://www.readthedocs.org/>`
+
+
+Example usage is here :doc:`usage` 
+Example installation is here :ref:
