@@ -4,7 +4,8 @@ RTD Sphinx documentation template project
 -----------------------------------------
 
 **rtd sphinx project** 
-basic template for creating a RTD sphinx documentation project
+
+a basic template for creating a RTD sphinx documentation
 that actually builds
 
 see <https://www.readthedocs.org/>`
