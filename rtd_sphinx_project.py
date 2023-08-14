@@ -1,21 +1,20 @@
 
 # test name project
-"""
 
+"""
 
 This is a Python docstring, we can use reStructuredText syntax here!
 
 .. code-block:: python
 
-   # rtd_sphinx_project.py
-    
-    # Import lumache
-    #import lumache
+# rtd_sphinx_project.py
 
-    # Call its only function
-    #get_random_ingredients(kind=["cheeses"])
+   
 """
 
+__version__ = "0.01.01"
 
-   #import numpy as np
+import numpy as np
+
+
 
