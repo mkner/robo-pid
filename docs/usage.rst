@@ -22,7 +22,7 @@ functions
 
 For example: basic numeric date/time data
 
-you can use the ``Clock.function()`` function:
+you can use the ``SysClock.now()`` function:
 
 .. autofunction:: SysClock.now()
 .. autofunction:: SysClock.today()
