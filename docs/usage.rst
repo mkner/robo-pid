@@ -15,11 +15,10 @@ To use this project, first install it using pip:
 example heading
 ----------------
 
-To get current time and date info based on the current underlying
+To get current time and date info based on the current underlying 
+system OS/HW configuration for place/timezone you can use several 
+functions 
 
-system OS/HW configuration for place/timezone you can use several
-
-functions
 
 For example: basic numeric date/time data
 
@@ -36,7 +35,6 @@ you can use the ``Clock.function()`` function:
 
  :py:func:`object.function`does something
 
-.. autoexception:: object.somewhatever
 
 For example:
 
