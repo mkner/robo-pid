@@ -8,6 +8,8 @@ RTD Sphinx documentation template
 a basic template for creating a RTD sphinx documentation
 that actually builds
 
+It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
+
 see 'Read The Docs <https://www.readthedocs.org/>'_
 
 
