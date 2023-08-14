@@ -38,7 +38,7 @@ you can use the ``SysClock.now()`` function:
 
 For example:
 
->>> import SysClock
+>>> from RoboClocks import SysClock
 >>> sysclock = SysClock()
 >>> sysclock.now()
 2023-08-14 17:28:11 
