@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Basic Sphinx Project conf.py"
+project = "Basic Sphinx Project Template"
 copyright = "(c)"
 author = ""
 
