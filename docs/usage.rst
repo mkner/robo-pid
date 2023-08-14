@@ -15,10 +15,18 @@ To use this project, first install it using pip:
 example heading
 ----------------
 
-To retrieve a list of random ingredients,
+To get current time and date info based on the current underlying
+system OS/HW configuration for place/timezone you can use several
+functions
+
+For example: basic numeric date/time data
+
 you can use the ``lumache.get_random_ingredients()`` function:
 
-.. autofunction:: class.function
+.. autofunction:: SysClock.now()
+.. autofunction:: SysClock.today()
+.. autofunction:: SysClock.date()
+
 
  :py:func:`object.function`does something
 
