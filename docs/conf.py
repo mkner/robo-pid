@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "Basic Sphinx Project Template"
-copyright = "(c)"
+copyright = "(c) 2023 Mike Knerr"
 author = ""
 
 
