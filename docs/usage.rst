@@ -39,10 +39,12 @@ you can use the ``SysClock.now()`` function:
 For example:
 
 >>> from RoboClocks import SysClock
->>> sysclock = SysClock()
->>> sysclock.now()
+>>> sc = SysClock()
+>>> sc.now()
 2023-08-14 17:28:11 
 
+>>> from Robot import Robot
+>>> robot = Robot()
 >>> robot.sysclock.today()
 Mon Aug 14 2023 17:53:49 EDT
 
