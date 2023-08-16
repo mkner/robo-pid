@@ -3,6 +3,6 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "rtd_sphinx_template"
+name = "rtd_sphinx_project"
 authors = [{name = "author", email = "author@email"}]
 dynamic = ["version", "description"]
