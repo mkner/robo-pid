@@ -1,10 +1,7 @@
-**rtd_sphinx**
+**project template for both pypi & sphinx**
 
-basic template for RTD (Read The Docs) using sphinx theme
+basic template for building both wheels for pypi
+and docs for RTD (Read The Docs) using sphinx theme
 
 
-
-this code file name rtd_sphinx_project.py 
-name has to match name set in pyproject.toml
-to get RTD build
 
