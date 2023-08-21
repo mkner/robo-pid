@@ -8,6 +8,7 @@ Python docstring - reStructuredText syntax below
 
 """
 
+
 def f(x):
   return x*x
   
