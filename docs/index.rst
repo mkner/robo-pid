@@ -6,7 +6,7 @@ RTD Sphinx documentation template
 **rtd sphinx project** 
 
 A basic template for creating a RTD sphinx documentation
-that actually builds!
+that actually builds! 
 
 See `Read The Docs <https://www.readthedocs.org/>`_
 
