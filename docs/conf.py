@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Basic Sphinx Project Template"
+project = "Project Template for Both PyPI & Sphinx"
 copyright = "(c) 2023 Mike Knerr"
 author = ""
 
