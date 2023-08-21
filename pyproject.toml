@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "new_pid"
-authors = [{name = "author", email = "author@email"}]
+#authors = [{name = "author", email = "author@email"}]
 dynamic = ["version", "description"]
 
 
