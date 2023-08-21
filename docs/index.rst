@@ -1,7 +1,7 @@
 .. include:: ../README.rst
 
 RTD Sphinx documentation template
------------------------------------------
+---------------------------------
 
 **rtd sphinx project** 
 
