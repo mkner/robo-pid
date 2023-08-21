@@ -1,8 +1,54 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+#[build-system]
+#requires = ["flit_core >=3.2,<4"]
+#build-backend = "flit_core.buildapi"
+
+#[project]
+#name = "rtd_sphinx_project"
+#authors = [{name = "author", email = "author@email"}]
+#dynamic = ["version", "description"]
+
 
 [project]
-name = "rtd_sphinx_project"
-authors = [{name = "author", email = "author@email"}]
-dynamic = ["version", "description"]
+name = "basic-pid"
+#version = "0.01.08"
+authors = [
+    { name="Mike Knerr" },
+]
+description = "Basic PID Controller For Discretized Time"
+readme = "README.md"
+requires-python = ">=3.6"
+keywords = ["pid", "controller", "control"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mkner/basic-pid/tree/main"
+#"Documentation" = "https://basic-pid.readthedocs.io/"
+
+[project.optional-dependencies]
+test = ["pytest"]
+doc = [
+    "furo==2023.3.27",
+    "myst-parser==1.0.0",
+    "sphinx==6.2.1",
+    "sphinx-copybutton==0.5.2",
+]
+examples = ["numpy", "matplotlib"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["basic_pid"]
+exclude = ["tests"]
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+target-version = ["py39", "py38", "py37", "py36"]
+extend-exclude = 'docs/'
+
