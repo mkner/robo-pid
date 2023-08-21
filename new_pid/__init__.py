@@ -1,5 +1,5 @@
 """
-flit wants docstring here?
+new project init info
 """
 
 __version__='0.01.01'
