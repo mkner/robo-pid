@@ -1,9 +1,8 @@
-# REQUIRED: some docstring
 
-"""
-minimal RTD sphinx project needs some sort of docstring to build ?
-Python docstring - reStructuredText syntax below
-"""
+
+#"""
+#minimal RTD sphinx project needs some sort of docstring to build ?
+##"""
 
 
 def f(x):
