@@ -4,7 +4,21 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "new_pyproject"
+authors = [{name = "Mike Knerr"}]
 #authors = [{name = "author", email = "author@email"}]
 dynamic = ["version", "description"]
+description = "new python project template for pypi & RTD docs"
+readme = "README.md"
+requires-python = ">=3.6"
+#keywords = ["pid", "controller", "control"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+
+
 
 
