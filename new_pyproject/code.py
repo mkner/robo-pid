@@ -20,7 +20,7 @@ class Project(object):
      def vers(self):
        return self._vers
  
-     def f(x):
+     def f(self, x):
       return(x*x)
  
 
