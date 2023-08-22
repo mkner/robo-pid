@@ -6,7 +6,7 @@ build-backend = "flit_core.buildapi"
 name = "new_pyproject"
 authors = [{name = "Mike Knerr"}]
 #authors = [{name = "author", email = "author@email"}]
-dynamic = ["version", "description"]
+dynamic = ["version"] #, "description"]
 description = "new python project template for pypi & RTD docs"
 readme = "README.md"
 requires-python = ">=3.6"
