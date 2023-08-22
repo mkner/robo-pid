@@ -7,7 +7,7 @@ new python project description
 __version__ = "0.01.02"
 
 # import acts to export 
-
+import __version__
 from .code import Project
 
 
