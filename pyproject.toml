@@ -9,6 +9,7 @@ authors = [{name = "Mike Knerr"}]
 dynamic = ["version"] #, "description"]
 description = "new python project template for pypi & RTD docs" #2nd line in pypi project page
 readme = "README.md"
+#license = LICENSE.md"
 requires-python = ">=3.6"
 keywords = ["python", "packages", "pypi", "RTD", "Sphinx"]
 classifiers = [
