@@ -4,7 +4,7 @@ new python project description
 """
 
 # flit uses this as one source version #
-__version__ = '0.01.06'
+__version__ = '0.01.07'
 
 # import acts to export 
 
