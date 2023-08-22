@@ -1,18 +1,18 @@
+
 #
 # code.py
 #
 
 class Project(object):
-# new project basic form
-     
+""" new project basic form """
      def __init__(self):
        super(Project, self).__init__()
        self._name = "Project"
        self._desc = "new python project class"
-       self._vers = __version__ = "v0.01.05"
+       self._vers  = "v0.01.05"
       
      def name(self):
-     return self._name
+      return self._name
 
      def desc(self):
        return self._desc
@@ -24,5 +24,4 @@ class Project(object):
       return(x*x)
  
 
-#
 
