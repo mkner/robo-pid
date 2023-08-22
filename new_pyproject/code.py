@@ -4,7 +4,7 @@
 #
 
 class Project(object):
-""" new project basic form """
+     """ new project basic form """
      def __init__(self):
        super(Project, self).__init__()
        self._name = "Project"
