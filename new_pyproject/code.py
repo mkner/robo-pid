@@ -11,7 +11,7 @@ class Project(object):
        super(Project, self).__init__()
        self._name = "Project"
        self._desc = "new python project class"
-       self._vers  = "v0.01.08b"
+       self._vers  = "v0.01.08c"
       
      def name(self):
       return self._name
