@@ -9,7 +9,9 @@ authors = [{name = "Mike Knerr"}]
 dynamic = ["version"] #, "description"]
 description = "new python project template for pypi & RTD docs" #2nd line in pypi project page
 readme = "README.md"
-#license = LICENSE.md"
+license = {text = "MIT"}
+#license = LICENSE.md" =
+license-files = ['LICENSE*']
 requires-python = ">=3.6"
 keywords = ["python", "packages", "pypi", "RTD", "Sphinx"]
 classifiers = [
@@ -17,6 +19,10 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[project.urls]
+homepage = "https://github.com/mkner/new-pyproject/"
+
 
 
 
