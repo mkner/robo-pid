@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Project Template for RTD Sphinx & PyPi "
+project = "Project Template for RTD Sphinx & Python Packages"
 copyright = "(c) 2023 Mike Knerr"
 author = ""
 
