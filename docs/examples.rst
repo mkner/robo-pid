@@ -27,6 +27,9 @@ Or just:
 >>> p.desc()
 'new python project class'
 
+>>> p.f(2)
+2
+
 
 
 
