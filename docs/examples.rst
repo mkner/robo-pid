@@ -23,22 +23,13 @@ For example: basic numeric date/time data
 
 you can use the ``SysClock.now()`` function:
 
-
 .. autofunction:: SysClock.now()
-
-.. autofunction:: SysClock.today()
-
-.. autofunction:: SysClock.date()
 
  
 .. :py:func:`SysClock.now()` basic date/time format
  
 .. :py:func:`SysClock.today()` more calendar oriented
  
-:py:func:`SysClock.today()` friendlier
-
-:py:func:`object.function`does something
-
 
 For example:
 
