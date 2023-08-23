@@ -1,6 +1,8 @@
 RTD Sphinx documentation
 ------------------------
 
+for a sample project
+
 **new-pyproject** 
 
 A basic template for creating a RTD sphinx documentation
