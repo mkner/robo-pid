@@ -27,12 +27,14 @@ you can use the ``SysClock.now()`` function:
 .. autofunction:: SysClock.today()
 .. autofunction:: SysClock.date()
 
- :py:func:`SysClock.now()` basic date/time format
- :py:func:`SysClock.today()` more calendar oriented
+ 
+:py:func:`SysClock.now()` basic date/time format
+ 
+:py:func:`SysClock.today()` more calendar oriented
+ 
+:py:func:`SysClock.today()` friendlier
 
- :py:func:`SysClock.today()` friendlier
-
- :py:func:`object.function`does something
+:py:func:`object.function`does something
 
 
 For example:
