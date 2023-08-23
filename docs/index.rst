@@ -1,4 +1,10 @@
-.. include:: ../README.rst
+.. toctree::
+   :maxdepth: 2
+
+   install
+   interface
+   examples
+
 
 RTD Sphinx documentation template
 ---------------------------------
@@ -8,8 +14,3 @@ RTD Sphinx documentation template
 A basic template for creating a RTD sphinx documentation
 that actually builds! 
 
-See `Read The Docs <https://www.readthedocs.org/>`_
-
-
-Example usage is here :doc:`usage` 
-Example installation is here :ref:`installation` 
