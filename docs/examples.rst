@@ -46,14 +46,12 @@ system OS/HW configuration for place/timezone you can use several
 functions 
 
 
-For example: basic numeric date/time data
+For basic numeric date/time data you can use the ``SysClock.now()`` function:
 
-you can use the ``SysClock.now()`` function:
 
- 
 .. :py:func:`SysClock.now()` basic date/time format
  
-.. :py:func:`SysClock.today()` more calendar oriented
+.. :py:func:`SysClock.today()` more calendar oriented 
  
 
 For example:
