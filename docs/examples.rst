@@ -1,7 +1,7 @@
 
 
 Example
-------------
+-------
 
 roboclocks
 **********
@@ -22,8 +22,6 @@ functions
 For example: basic numeric date/time data
 
 you can use the ``SysClock.now()`` function:
-
-.. autofunction:: SysClock.now()
 
  
 .. :py:func:`SysClock.now()` basic date/time format
