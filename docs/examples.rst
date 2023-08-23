@@ -59,7 +59,7 @@ For basic numeric date/time data you can use the ``SysClock.now()`` function:
 
 For example:
 
->>> from roboClocks import SysClock
+>>> from roboclocks import SysClock
 >>> sc = SysClock()
 >>> sc.now()
 2023-08-14 17:28:11 
