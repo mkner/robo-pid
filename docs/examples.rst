@@ -3,6 +3,29 @@
 Example
 -------
 
+new-pyproject
+*************
+
+For example:
+
+>>> import new_pyproject
+
+>>> from new_pyproject import Project
+
+>>> p = Project()
+
+>>> p.name()
+'Project'
+
+>>> p.vers()
+'v0.01.08c'
+
+>>> p.desc()
+'new python project class'
+
+
+
+
 roboclocks
 **********
 
