@@ -1,10 +1,6 @@
 interface
 =========
 
-.. autosummary::
-   :toctree: generated
-
-   
 
 
 Interface
