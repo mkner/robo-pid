@@ -3,6 +3,8 @@
 Example
 ------------
 
+Examples from other projects:
+****************************
 To use this project, first install it using pip:
 
 .. code-block:: console
