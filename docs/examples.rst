@@ -3,8 +3,8 @@
 Example
 ------------
 
-Example for another project
-****************************
+roboclocks
+**********
 
 To use this project, first install it using pip:
 
