@@ -2,7 +2,7 @@
 Interface
 ---------
 
-.. class:: ProjectClass()
+.. class:: Project()
 
 
  .. method:: name()
@@ -11,15 +11,18 @@ Interface
 
 
  .. method:: desc()
+
   returns short description of class
 
 
  .. method:: vers()
+
    returns version number of class
    in format x.y.z<w>
 
 
  .. method:: f(x)
+
    returns x
    thats it
 
