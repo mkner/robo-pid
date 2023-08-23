@@ -1,8 +1,11 @@
 
 #
-# (c) 2023 MK
+# (c) 2023 Mike Knerr
 #
 # code.py
+#
+# a basic class to instantiate
+# for template project new-pyproject
 #
 
 class Project(object):
@@ -11,7 +14,7 @@ class Project(object):
        super(Project, self).__init__()
        self._name = "Project"
        self._desc = "new python project class"
-       self._vers  = "v0.01.08c"
+       self._vers  = "v0.01.08d"
       
      def name(self):
       return self._name
