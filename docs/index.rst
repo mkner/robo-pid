@@ -13,7 +13,7 @@ that actually builds!
 This is the top level index page for:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    install
    interface
