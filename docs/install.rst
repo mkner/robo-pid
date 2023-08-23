@@ -14,12 +14,12 @@ Or for current test development versions
 
 .. code-block:: console
 
-    $ install -i https://test.pypi.org/simple/ new-pyproject
+    $ pip install -i https://test.pypi.org/simple/ new-pyproject
 
 
 Or a specific release or pre-release test version
 
 .. code-block:: console
 
-   $ install -i https://test.pypi.org/simple/ new-pyproject==0.1.8c0
+   $ pip install -i https://test.pypi.org/simple/ new-pyproject==0.1.8c0
 
