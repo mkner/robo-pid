@@ -23,8 +23,9 @@ Interface
 
  .. method:: f(x)
 
-   returns x
-   thats it
+   returns the input valux *x* and thats it
+   
+
 
 
   
