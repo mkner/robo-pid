@@ -1,4 +1,4 @@
-RTD Sphinx documentation
+RTD Sphinx Documentation
 ------------------------
 
 
