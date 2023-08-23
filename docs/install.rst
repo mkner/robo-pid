@@ -7,4 +7,4 @@ To use this project, first install it using pip:
 
 .. code-block:: console
 
-    $ pip install roboclocks
+    $ pip install new-pyproject
