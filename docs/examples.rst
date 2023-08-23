@@ -31,9 +31,9 @@ you can use the ``SysClock.now()`` function:
 .. autofunction:: SysClock.date()
 
  
-:py:func:`SysClock.now()` basic date/time format
+.. :py:func:`SysClock.now()` basic date/time format
  
-:py:func:`SysClock.today()` more calendar oriented
+.. :py:func:`SysClock.today()` more calendar oriented
  
 :py:func:`SysClock.today()` friendlier
 
