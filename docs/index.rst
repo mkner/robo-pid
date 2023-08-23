@@ -1,7 +1,7 @@
 RTD Sphinx documentation
 ------------------------
 
-**rtd sphinx project** 
+**new-pyproject** 
 
 A basic template for creating a RTD sphinx documentation
 that actually builds! 
