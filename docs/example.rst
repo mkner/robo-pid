@@ -1,9 +1,6 @@
-Usage
-=====
 
-.. _installation:
 
-Installation
+Example
 ------------
 
 To use this project, first install it using pip:
