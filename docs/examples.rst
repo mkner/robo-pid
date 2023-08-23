@@ -10,7 +10,7 @@ For example:
 
 >>> import new_pyproject
 
-p = new_pyproject.Project()
+>>> p = new_pyproject.Project()
 
 Or just:
 
