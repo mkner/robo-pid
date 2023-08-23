@@ -36,6 +36,8 @@ Or just:
 roboclocks
 **********
 
+Included here as another example. Not installed with **new-pyproject**
+
 To use this project, first install it using pip:
 
 .. code-block:: console
