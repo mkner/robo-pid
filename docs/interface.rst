@@ -6,6 +6,7 @@ Interface
 
 
  .. method:: name()
+
   returns name of class
 
 
