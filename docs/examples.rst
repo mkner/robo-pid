@@ -3,8 +3,9 @@
 Example
 ------------
 
-Examples from other projects:
+Example for another project
 ****************************
+
 To use this project, first install it using pip:
 
 .. code-block:: console
