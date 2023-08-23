@@ -10,6 +10,10 @@ For example:
 
 >>> import new_pyproject
 
+p = new_pyproject.Project()
+
+Or just:
+
 >>> from new_pyproject import Project
 
 >>> p = Project()
