@@ -1,7 +1,7 @@
 RTD Sphinx documentation
 ------------------------
 
-For a sample project
+
 
 new-pyproject
 *************
