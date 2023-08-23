@@ -9,8 +9,7 @@ To use this project, first install it using pip:
 
     $ pip install roboclocks
 
-example heading
-----------------
+
 
 To get current time and date info based on the current underlying 
 system OS/HW configuration for place/timezone you can use several 
