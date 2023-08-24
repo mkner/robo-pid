@@ -7,19 +7,19 @@ To use this project, first install it using pip:
 
 .. code-block:: console
 
-    $ pip install new-pyproject
+    $ pip install basic-pid
 
 
 Or for current test development versions
 
 .. code-block:: console
 
-    $ pip install -i https://test.pypi.org/simple/ new-pyproject
+    $ pip install -i https://test.pypi.org/simple/ basic-pid
 
 
-Or a specific release or pre-release test version
+Or a specific release or pre-release test version for example
 
 .. code-block:: console
 
-   $ pip install -i https://test.pypi.org/simple/ new-pyproject==0.1.8c0
+   $ pip install -i https://test.pypi.org/simple/ basic-pid==0.1.10a
 
