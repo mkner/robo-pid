@@ -10,7 +10,7 @@ A Python PID controller for discretized time.
 
 **Basic PID** is a classic PID controller that is easy to use, works and does the job.
 
-The PID controller implements timestep integration that is designed to be used in discretized time regulators.
+The controller implements timestep integration that is designed to be used in discretized time regulators.
 
 **Basic PID** has proven to be a tested, and reliable PID controller. It has been used, for example, with mobile robotic systems for LVC (linear velocity control) for wheels, LVDR (lateral velocity differential regulator) and ADVR (angular differential velocity regulator) for tracking a heading angle with differential drive robots using typical motion control input signals for linear & angular velocities.
 
