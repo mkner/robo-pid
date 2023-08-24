@@ -13,7 +13,7 @@ class BasicPid(object):
        super(BasicPid, self).__init__()
        self._name = "BasicPid"
        self._desc = "Basic Discrete Time PID Controller"
-       self._vers = "v0.01.10a"
+       self._vers = "v0.01.10b"
       
        self._Kp = 1.0
        self._Ki = 0
