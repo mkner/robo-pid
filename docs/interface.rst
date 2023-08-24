@@ -2,7 +2,7 @@
 Interface
 ---------
 
-.. class:: Pidpy()
+.. class:: BasicPid()
 
 
  .. method:: reset()
