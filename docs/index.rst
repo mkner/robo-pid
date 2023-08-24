@@ -8,7 +8,7 @@ basic-pid
 
 A Python PID controller for discretized time.
 
-*Basic PID* is a classic PID controller that is easy to use, works and does the job.
+**Basic PID** is a classic PID controller that is easy to use, works and does the job.
 
 The PID controller implements timestep integration that is designed to be used in discretized time regulators.
 
