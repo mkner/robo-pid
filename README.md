@@ -1,13 +1,13 @@
-Basic PID -
+**Basic PID** 
 
 A Python PID controller for discretized time.
 
-Basic PID is a classic PID controller that is easy to use, works and does the job.
+**Basic PID** is a classic PID controller that is easy to use, works and does the job.
 
 The PID controller implements timestep integration
 that is designed to be used in discretized time regulators.
 
-Basic PID has proven to be a tested, and reliable PID controller. It has been used, for example, 
+**Basic PID** has proven to be a tested, and reliable PID controller. It has been used, for example, 
 with mobile robotic systems for LVC (Linear Velocity Control) for regulating wheel velocities, 
 LVDR (Lateral Velocity Differential Regulator) for keeping the wheel velocities in sync for 
 differential drive mobile robots when traversing a straight line path and 
