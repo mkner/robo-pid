@@ -16,7 +16,7 @@ Or just:
 
 >>> from basic_pid import Pid
 
->>> p = BasicPid()
+>>> p = Pid()
 
 >>> p.name()
 'BasicPid'
