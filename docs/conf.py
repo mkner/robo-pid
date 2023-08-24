@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Project Template for RTD Sphinx & Python Packages"
+project = "PID Controller for Discrete Time"
 copyright = "(c) 2023 Mike Knerr"
 author = ""
 
