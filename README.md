@@ -1,13 +1,32 @@
-**Project template for both python packages & Read The Docs**
+Basic PID -
 
-Basic directory structures and template files for building both python pypi\
-packages and documentation for RTD (Read The Docs) using the sphinx theme.
+A Python PID controller for discretized time calculations
 
-This set of example directories and files actually build *both* RTD and PYPI !
+Basic PID is a classic PID controller that is easy to use, works and does the job.
 
-Python package release v0.01.09 is here: https://pypi.org/project/new-pyproject/
+The PID controller and its equations implement timestep integration
+that is designed to be used in discretized time computations.
 
-RTD documentation is here: https://new-pyproject.readthedocs.io/en/latest/
+Basic PID has proven to be a tested, and reliable PID controller. It has been used,
+for example, with mobile robotic systems for LVC (linear velocity control) for wheels,
+LVDR (lateral velocity differential regulator) and ADVR (angular differential velocity
+regulator) for tracking a heading angle with differential drive robots using typical
+motion control input signals for linear & angular velocities.
+
+It supports 2 modes of operation: Integrative and Iterative
+
+In iterative mode, the timestep integration for updating an input
+signal is done in the algorithm that calls the PID controller
+for the ouput of the PID at the current timestep.
+
+In integrative mode, the timestep integration is done inside the
+controller and the output from the PID controller for the
+current timestep is used directly to be sent to the process plant
+as the current input signal.
+
+For documentation see https://basic-pid.readthedocs.io/en/latest/
+
+
 
 
 
