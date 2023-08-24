@@ -14,7 +14,7 @@ The controller implements timestep integration that is designed to be used in di
 
 **Basic PID** has proven to be a tested, and reliable PID controller. It has been used, for example, with mobile robotic systems for LVC (Linear Velocity Control) for regulating wheel velocities, LVDR (Lateral Velocity Differential Regulator) for keeping the wheel velocities in sync for differential drive mobile robots when traversing a straight path and ADVR (Angular Differential Velocity Regulator) for tracking a heading angle using typical motion control input signals (v,w) for linear & angular velocities.
 
-It supports 2 modes of operation:  Integrative and Iterative
+There are 2 primary modes of operation:  Integrative and Iterative
 
 In iterative mode, the timestep integration for updating an input signal is done in the algorithm that calls the PID controller for the ouput of the PID at the current timestep.
 
