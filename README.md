@@ -4,8 +4,8 @@ A Python PID controller for discretized time calculations
 
 Basic PID is a classic PID controller that is easy to use, works and does the job.
 
-The PID controller and its equations implement timestep integration
-that is designed to be used in discretized time computations.
+The PID controller implements timestep integration
+that is designed to be used in discretized time regulators.
 
 Basic PID has proven to be a tested, and reliable PID controller. It has been used,
 for example, with mobile robotic systems for LVC (linear velocity control) for wheels,
