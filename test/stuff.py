@@ -1,20 +1,17 @@
 
 # the usual
 
-import new_pyproject
+import basic_pid
 
-from new_pyproject import Project
+from basic_pid import BasicPid
 
-p = Project()
+p = BasicPid()
 
 p.name()
-#Out[5]: 'Project'
 
 p.desc()
-#Out[6]: 'new python project class'
 
 p.vers()
-#Out[7]: 'v0.01.07'
 
-p.f(2)
+
 
