@@ -3,32 +3,31 @@
 Example
 -------
 
-new-pyproject
+basic-pid
 *************
 
 For example:
 
->>> import new_pyproject
+>>> import basic_pid
 
->>> p = new_pyproject.Project()
+>>> p = basic_pid.BasicPid()
 
 Or just:
 
->>> from new_pyproject import Project
+>>> from basic_pid import Pid
 
->>> p = Project()
+>>> p = BasicPid()
 
 >>> p.name()
-'Project'
+'BasicPid'
 
 >>> p.vers()
-'v0.01.08c'
+'v0.01.10a'
 
 >>> p.desc()
-'new python project class'
+'Basic Discrete Time PID Controller'
 
->>> p.f(2)
-2
+
 
 
 
