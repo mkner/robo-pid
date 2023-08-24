@@ -3,8 +3,8 @@ Documentation
 
 
 
-new-pyproject
-*************
+basic-pid
+*********
 
 
 A basic template for creating a RTD sphinx documentation
