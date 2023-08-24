@@ -1,6 +1,6 @@
 
 """
-new python project description
+basic-pid - PID Controller for discretized time
 """
 
 # flit uses this as one source version #
