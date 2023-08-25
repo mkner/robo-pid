@@ -25,7 +25,9 @@ controller and the output from the PID controller for the
 current timestep is used directly to be sent to the process plant
 as the current input signal.
 
-Installation:   **pip** install basic-pid
+Installation: 
+
+$ **pip** install basic-pid
 
 For documentation see https://basic-pid.readthedocs.io/en/latest/
 
