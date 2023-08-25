@@ -27,7 +27,7 @@ as the current input signal.
 
 Installation:
 
-pip install basic-pid
+**pip** install basic-pid
 
 For documentation see https://basic-pid.readthedocs.io/en/latest/
 
