@@ -147,7 +147,7 @@ class BasicPid(Object):
         #proportional term always same regardless of mode
         e = signal_ref-signal
         #NEW
-        #MIKE update 7/11 to braunl version to match I & D calcs
+        #update 7/11 to braunl version to match I & D calcs
         self._P = e - self._e_prev
         #self._P = e
         P = self._P
