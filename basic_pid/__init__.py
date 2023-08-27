@@ -7,7 +7,7 @@ basic-pid - PID Controller for discretized time
 # note: pep whatever doesnt like > 'x.y.<number>c'
 # for example: 0.01.08d doesnt fly building from pyproject.toml
 
-__version__ = '0.01.10b'
+__version__ = 'v0.01.11a'
 
 # import acts to export 
 
