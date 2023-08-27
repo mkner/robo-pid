@@ -43,33 +43,7 @@ class BasicPid(Object):
        
        self._setAllModesOff()
        self._mode_iterate = True # default summation by calling function
-"""
-     #FUTURE get from upstream Object
-     def name(self):
-           print(self._name)
 
-     def desc(self):
-        print(self._desc)
-    
-     def version(self):
-        print(self._vers)
-    
-     def vers(self):
-        print(self._vers)
-    
-     def about(self):
-        print(self._about)
-        
-     def getName(self):
-          return self._name
-          
-     def getVers(self):
-          return self._vers
-     
-          
-     def desc(self):
-          return self._desc
-    """
 
      def reset(self):
          # reset for new run - clear out integrations
@@ -133,7 +107,6 @@ class BasicPid(Object):
          time_inc = abs(time_inc) # just fix it
          self._delta_time = time_inc
         
-         
      def getTimeinc(self):
          return self._delta_time
      
@@ -219,7 +192,9 @@ class BasicPid(Object):
      def get(self, signal_ref, signal):
          #short form
          return self.getPid(signal_ref, signal)
-         
+
+## SCRAP HEAP
+
 """    
 class BasicPid(object):
      """Basic Python PID Controller """ 
@@ -407,3 +382,31 @@ class BasicPid(object):
          return self.getPid(signal_ref, signal)
 """       
      
+"""
+     #FUTURE get from upstream Object
+     def name(self):
+           print(self._name)
+
+     def desc(self):
+        print(self._desc)
+    
+     def version(self):
+        print(self._vers)
+    
+     def vers(self):
+        print(self._vers)
+    
+     def about(self):
+        print(self._about)
+        
+     def getName(self):
+          return self._name
+          
+     def getVers(self):
+          return self._vers
+     
+          
+     def desc(self):
+          return self._desc
+    """
+    
