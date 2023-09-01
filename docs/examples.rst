@@ -34,15 +34,15 @@ Wheel-Motor Velocity Controller
 
   # example of wheel/motor velocity PID control
   # using BasicPid in timestep iterative mode
-  #
-  # (c) 2023, 2022 - Mike Knerr
-  #
   # assume that IoScan is a class that has background process
   # input signal processing & buffering capability
   # and a component object of WheelVelocity is clock 
   # that can return the uptime of the clock since
   # instantiation of the WheelVelocity object 
   # in milliseconds with the call clock.millis()
+  #
+  # (c) 2023, 2022 - Mike Knerr
+  #
 
   class WheelVelocity(IoScan):
 
