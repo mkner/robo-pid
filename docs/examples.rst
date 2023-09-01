@@ -27,8 +27,8 @@ Or just:
 >>> p.desc()
 'Basic Discrete Time PID Controller'
 
-Wheel/Motor Velocity Controller
--------------------------------
+Wheel-Motor Velocity Controller
+*******************************
 
 .. code-block:: python
 
@@ -46,13 +46,13 @@ Wheel/Motor Velocity Controller
 
   class WheelVelocity(IoScan):
 
-    def __init__(self, wheel):#, velocity):
+    def __init__(self, wheel):
         super(WheelVelocity, self).__init__()
 
         self._name = "WheelVelocity"
         self._desc = "WheelVelocity"
         self._vers = "v0.01.01"  # 0.09 w/ velocity
-        self._wheel = wheel #motor = motor  # Motor()
+        self._wheel = wheel #contains motor 
         
         self.pid = BasicPid() # on ext interface
         
