@@ -32,23 +32,19 @@ Wheel/Motor Velocity Controller
 
 .. code-block:: python
 
-#  Basic Python PID Controller
+  # example of wheel/motor velocity PID control
+  # using BasicPid in timestep iterative mode
+  #
+  # (c) 2023, 2022 - Mike Knerr
+  #
+  # assume that IoScan is a class that has background process
+  # input signal processing & buffering capability
+  # and a component object of WheelVelocity is clock 
+  # that can return the uptime of the clock since
+  # instantiation of the WheelVelocity object 
+  # in milliseconds with the call clock.millis()
 
-# example of wheel/motor velocity PID control
-# using BasicPid in timestep iterative mode
-#
-# (c) 2023, 2022 - Mike Knerr
-#
-# assume that IoScan is a class that has background process
-# input signal processing & buffering capability
-# and a component object of WheelVelocity is clock 
-# that can return the uptime of the clock since
-# instantiation of the WheelVelocity object 
-# in milliseconds with the call clock.millis()
-#
-#
-
-class WheelVelocity(IoScan):
+  class WheelVelocity(IoScan):
 
     def __init__(self, wheel):#, velocity):
         super(WheelVelocity, self).__init__()
@@ -92,9 +88,9 @@ class WheelVelocity(IoScan):
         self.startScanning()
         
 
-# this function would be called every self.getTimeinc() timesteps
-# by a process thread that is running in the WheelVelocity object
-# handled by class IoScan that WheelVelocity is decendant from
+     # this function would be called every self.getTimeinc() timesteps
+     # by a process thread that is running in the WheelVelocity object
+     # handled by class IoScan that WheelVelocity is decendant from
 
     def _velocity_handler(self):
         
@@ -160,7 +156,6 @@ class WheelVelocity(IoScan):
           if (self.clock.millis() - self._dur_start_time) > self._dur:
               self._wheel.stop()
               self._dur = None
-
         return
     
 
