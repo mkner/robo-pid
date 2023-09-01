@@ -16,8 +16,8 @@ class BasicPid(Object):
        super(BasicPid, self).__init__()
        self._name = "BasicPid"
        self._desc = "Basic Discrete Time PID Controller"
-       self._vers = "v0.02.01 <-- v0.01.11b1"  #"v0.01.11b1 from dev v0.01.07b"
-       self._about = "Basic Pid (stable release)"
+       self._vers = "v0.02.02a <-- v0.02.01 <-- v0.01.11b1"  #"v0.01.11b1 from dev v0.01.07b"
+       self._about = "Basic Pid"
           
        self._Kp = 1.0
        self._Ki = 0
