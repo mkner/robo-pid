@@ -24,7 +24,7 @@ classifiers = [
 homepage = "https://github.com/mkner/basic-pid/"
 
 dependencies = [
-  'robo-base >= 0.1.1',
+  'robo-base >= 0.1.1c',
 ]
 
 
