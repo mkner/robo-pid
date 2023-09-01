@@ -23,6 +23,9 @@ classifiers = [
 [project.urls]
 homepage = "https://github.com/mkner/basic-pid/"
 
+dependencies = [
+  'robo-base >= 0.1.1',
+]
 
 
 
