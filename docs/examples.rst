@@ -3,7 +3,7 @@
 Example
 -------
 
-info
+Info
 ****
 
 For example:
