@@ -20,12 +20,12 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[project.urls]
-homepage = "https://github.com/mkner/basic-pid/"
-
 dependencies = [
   'robo-base >= 0.1.1c',
 ]
+
+[project.urls]
+homepage = "https://github.com/mkner/basic-pid/"
 
 
 
