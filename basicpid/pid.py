@@ -7,8 +7,9 @@
 #
 #
 
+from robobase import Object # as of 9/5
 
-from robo_base import Object
+#from robo_base import Object
 
 class BasicPid(Object):
      """Basic Python PID Controller """ 
