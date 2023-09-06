@@ -11,9 +11,3 @@ requires = [
 #    "setuptools",
 #   "wheel",]
     
-
-
-
-    "setuptools",
-    "wheel",]
-    
