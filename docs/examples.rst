@@ -3,8 +3,8 @@
 Example
 -------
 
-module
-******
+Using the module
+****************
 
 For example:
 
