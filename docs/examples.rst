@@ -8,13 +8,13 @@ Info
 
 For example:
 
->>> import basic_pid
+>>> import basicpid
 
->>> p = basic_pid.BasicPid()
+>>> p = basicpid.BasicPid()
 
 Or just:
 
->>> from basic_pid import Pid
+>>> from basicpid import Pid
 
 >>> p = Pid()
 
@@ -44,6 +44,8 @@ Wheel-Motor Velocity Controller
   # (c) 2023, 2022 - Mike Knerr
   #
 
+  from basicpid import BasicPid
+
   class WheelVelocity(IoScan):
 
     def __init__(self, wheel):
@@ -51,7 +53,7 @@ Wheel-Motor Velocity Controller
 
         self._name = "WheelVelocity"
         self._desc = "WheelVelocity"
-        self._vers = "v0.01.01"  # 0.09 w/ velocity
+        self._vers = "v0.01.02"  # 0.09 w/ velocity
         self._wheel = wheel #contains motor 
         
         self.pid = BasicPid() # on ext interface
