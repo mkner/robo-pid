@@ -3,8 +3,8 @@
 Example
 -------
 
-Info
-****
+module
+******
 
 For example:
 
