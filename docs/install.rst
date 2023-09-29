@@ -13,7 +13,7 @@ To use this project, first install it using pip:
 The main python package download site is: `here <https://pypi.org/project/basic-pid/>`_
 
 
-For a pecific release or pre-release test version
+To download a specific pre-release test version for example
 
 .. code-block:: console
 
