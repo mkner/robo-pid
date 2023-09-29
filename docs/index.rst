@@ -2,9 +2,8 @@
 basic-pid
 *********
 
-A Python PID controller for discretized time.
 
-**basic-pid** is a classic PID controller that is easy to use, works and does the job.
+**basic-pid** is a classic PID controller for discretized time that is is easy to use, works and does the job.
 
 .. toctree::
    :maxdepth: 1
