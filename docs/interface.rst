@@ -38,9 +38,9 @@ Interface
  .. method:: setTimeinc(time_inc)
 
     Sets the discrete timestep increment value used in integrative
-    calculations. time_inc can be any positive value  The time_inc unit
+    calculations. **time_inc** can be any positive value  The **time_inc** unit
     of measurement needs to be the same unit as the sample rate of 
-    current signal. This value can be changed dynamically while bppc is running.
+    current signal. This value can be changed dynamically while the controller is running.
 
  .. method:: getTimeinc()
 
