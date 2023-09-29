@@ -20,6 +20,7 @@ In **integrative mode**, the timestep integration is done inside the controller 
 .. toctree::
    :maxdepth: 1
 
+   about
    install
    interface
    examples
