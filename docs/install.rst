@@ -20,7 +20,6 @@ For a pecific release or pre-release test version
    $ pip install -i https://test.pypi.org/simple/ basic-pid==0.1.10a
 
 
-The main python package download site is: `here <https://pypi.org/project/basic-pid/>`_
 
 
 
