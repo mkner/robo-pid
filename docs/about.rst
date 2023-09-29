@@ -1,5 +1,5 @@
 
-about
+About
 *****
 
 A Python PID controller for discretized time.
