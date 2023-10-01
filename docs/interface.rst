@@ -138,7 +138,7 @@ Interface
  .. method:: getPid(signal_ref, signal)
 
    Returns the results of the PID equation evaluation *since the last* call
-   to this function. It is usually called each timestep interval that is
+   to this function. It is usually called at each timestep interval that is
    also synced to the measured signal that samples at the same timestep
    interval frequency. Calculation & persistent values depend on mode
   
