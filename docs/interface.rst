@@ -92,7 +92,7 @@ Interface
     | Ki - integral gain
     | Kd - derivative gain
 
-    :return: the gains (Kp, Ki, Kd)
+    :return: (Kp, Ki, Kd)
     :rtype: tuple
 
 
