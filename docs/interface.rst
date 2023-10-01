@@ -114,7 +114,7 @@ Interface
    Calculation & persistent values depend on mode
   
    :param: signal_ref - reference signal value
-   :param signal  - current measured signal value
+   :param: signal  - current measured signal value
    :return: result of PID equation eval
    :rtype: float
 
@@ -125,8 +125,16 @@ Interface
     PID equation evaluation irregardless of mode
     
    :param: signal_ref - reference signal value
-   :param signal  - current measured signal value
+   :param: signal  - current measured signal value
    :return: components of PID equation evaluation (Kp P, Ki, I, Kd, D)
+
+            Kp - proprotional gain
+            P  - result of proportional term evaluation
+            Ki - integral gain
+            I  - result of integral term evaluation
+            Kd - derivative gain
+            D  - result of derivative term evaluation
+
    :rtype: tuple
 
  .. method::  pid(signal_ref, signal)
