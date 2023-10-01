@@ -120,17 +120,19 @@ Interface
 
 
  .. method::  getPidTuple(signal_ref, signal)
-
-    returns tuple form of the components of the PID
-    equation evaluation irregardless of mode
-
-    (Kp P, Ki, I, Kd, D)
-
+    
+    returns tuple form of the components of the
+    PID equation evaluation irregardless of mode
+    
+   :param: signal_ref - reference signal value
+   :param signal  - current measured signal value
+   :return: components of PID equation evaluation (Kp P, Ki, I, Kd, D)
+   :rtype: tuple
 
  .. method::  pid(signal_ref, signal)
-
+   
    short form for getPid(signal_ref, signal)
-
+    
 
  .. method::  get(signal_ref, signal)
 
