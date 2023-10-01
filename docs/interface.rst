@@ -8,17 +8,19 @@ Interface
  .. method:: reset()
 
   Resets for new controller run. Clears out integrations
-  but keeps gains intact.
+  but keeps gains intact
 
   :param: None
   :return: None
-  :rtype: None
 
  .. method:: resetAll()
        
   Resets all internal variables to the the object instance 
   initialization state. Gains & timestep increment are also
   set to default values.
+
+  :param: None
+  :return: None
 
  .. method:: setIntegrateModeOn()
 
@@ -41,15 +43,23 @@ Interface
  .. method:: setTimeinc(time_inc)
 
     Sets the discrete timestep increment value used in integrative
-    calculations. **time_inc** can be any positive value  The **time_inc** unit
-    of measurement needs to be the same unit as the sample rate of 
-    current signal. This value can be changed dynamically while the controller is running.
+    calculations. **time_inc** can be any positive value  Set the **time_inc** unit
+    of measurement to be the same unit as the sample rate of current signal. This 
+    value can be changed dynamically while the controller is running to adjust to 
+    changes in the frequency of the input signal if necessary.
+
+   :param: time_inc
+   :return: None
+
 
  .. method:: getTimeinc()
 
-   returns the current discrete timestep increment value
+     returns the current discrete timestep increment value
 
-
+   :param: None
+   :return: time_inc
+   
+  
  .. method:: setGains(Kp,Ki,Kd)
         
       sets the gains:
