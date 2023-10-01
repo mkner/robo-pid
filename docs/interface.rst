@@ -8,7 +8,7 @@ Interface
  .. method:: reset()
 
   Resets the controller for a new run. Clears out integration
-  results but keeps the currently set gains intact.
+  results but keeps the currently set gains and mode parameters intact.
 
   :param: None
   :return: None
