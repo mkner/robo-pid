@@ -22,22 +22,31 @@ Interface
   :param: None
   :return: None
 
+
  .. method:: setIntegrateModeOn()
 
  Sets integrative mode on
+
 
  .. method:: setIterateModeOn()
 
  Sets iteration mode on
 
+
  .. method:: inIntegrateMode()
 
-   returns True if in integrative mode and False if not
+    check if using integrative mode for PID evaluation
+
+    :return: **True** if in integrative mode and **False** if not
+    :rtype: Bool
 
 
  .. method:: inIterateMode()
 
-   returns True if in iteration mode and False if not
+    check if using iterative mode for PID evaluation
+
+    :return: **True** if in iterative mode and **False** if not
+    :rtype: Bool
 
 
  .. method:: setTimeinc(time_inc)
@@ -54,10 +63,10 @@ Interface
 
  .. method:: getTimeinc()
 
-     returns the current discrete timestep increment value
+    returns the current discrete timestep increment value
 
-   :param: None
-   :return: time_inc
+    :param: None
+    :return: time_inc
    
   
  .. method:: setGains(Kp,Ki,Kd)
@@ -70,6 +79,10 @@ Interface
 
         Kd - derivative gain
 
+   :param: Kp - proportional gain
+   :param:  Ki - integral gain
+   :param:  Kd - integral gain
+   :return: None
 
  .. method:: getGains()
 
@@ -78,7 +91,7 @@ Interface
 
  .. method:: setKp(Kp)
  
-     sets the proportional gain **Kp**
+    sets the proportional gain **Kp**
 
     :param: Kp - the proportional gain
 
@@ -102,7 +115,7 @@ Interface
 
  .. method:: getKi()
 
-     get the current integral gain **Ki**
+    get the current integral gain **Ki**
  
      :return: Ki
      :rtype: float
@@ -110,17 +123,17 @@ Interface
 
  .. method:: setKd(Kd):
 
-       sets the derivative gain **Kd**
+    sets the derivative gain **Kd**
 
     :param: Kd - the derivative gain
 
 
  .. method:: getKd()
 
-       get the current derivative gain **Kd**
+    get the current derivative gain **Kd**
     
-   :return: Kd 
-   :rtype: float
+    :return: Kd 
+    :rtype: float
 
 
  .. method:: getPid(signal_ref, signal)
@@ -143,9 +156,9 @@ Interface
     an equivalent. The returned results are independent of mode that was used
     at the time of the last evaluation.
     
-   :param: signal_ref - reference signal value
-   :param: signal  - current measured signal value
-   :return: components of PID equation evaluation (Kp P, Ki, I, Kd, D)
+    :param: signal_ref - reference signal value
+    :param: signal  - current measured signal value
+    :return: components of PID equation evaluation (Kp P, Ki, I, Kd, D)
 
      |  Kp - proprotional gain
      |  P  - result of proportional term evaluation
@@ -159,12 +172,12 @@ Interface
 
  .. method::  pid(signal_ref, signal)
    
-   short form for getPid(signal_ref, signal)
+    short form for getPid(signal_ref, signal)
     
 
  .. method::  get(signal_ref, signal)
 
-   short form for getPid(signal_ref, signal)
+    short form for getPid(signal_ref, signal)
 
 
 
