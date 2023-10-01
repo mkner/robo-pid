@@ -88,22 +88,29 @@ Interface
 
  .. method:: setKi(Ki)
 
-        sets Ki
+    sets the integral gain **Ki**
+
+    :param: Ki - the integral gain
 
 
  .. method:: getKi()
 
-     returns Ki
+     get the current integral gain **Ki**
+ 
+     :return: Ki
+     :rtype: float
 
 
  .. method:: setKd(Kd):
 
-       sets Kd
+       sets the derivative gain **Kd**
+
+    :param: Kd - the derivative gain
 
 
  .. method:: getKd()
 
-       get the current proportional gain **Kd**
+       get the current derivative gain **Kd**
     
    :return: Kd 
    :rtype: float
@@ -124,7 +131,7 @@ Interface
 
  .. method::  getPidTuple(signal_ref, signal)
     
-    returns tuple form of the components of the
+    Returns tuple form of the components of the
     PID equation evaluation irregardless of mode
     
    :param: signal_ref - reference signal value
