@@ -44,7 +44,9 @@ Wheel-Motor Velocity Controller
   # (c) 2023, 2022 - Mike Knerr
   #
 
+  from robotime import Clock
   from basicpid import BasicPid
+  
 
   class WheelVelocity(IoScan):
 
@@ -54,8 +56,10 @@ Wheel-Motor Velocity Controller
         self._name = "WheelVelocity"
         self._desc = "WheelVelocity"
         self._vers = "v0.01.02"  # 0.09 w/ velocity
+
         self._wheel = wheel #contains motor 
-        
+        self.clock = Clock()
+
         self.pid = BasicPid() # on ext interface
         
         self._v_ref = 0 # signal reference velocity
