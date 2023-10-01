@@ -120,7 +120,7 @@ Interface
 
    Returns the results of the PID equation evaluation *since the last* call
    to this function. It is usually called each **time_step** interval that is
-   also synced to the measured signal that samples at the same time interval.
+   also synced to frequency of the measured signal that samples at the same time interval.
    Calculation & persistent values depend on mode
   
    :param: signal_ref - reference signal value
@@ -131,8 +131,10 @@ Interface
 
  .. method::  getPidTuple(signal_ref, signal)
     
-    Returns tuple form of the components of the
-    PID equation evaluation irregardless of mode
+    Returns tuple form of the components of the PID equation
+    **since last evaluation** that was initiated by calling **getPid(...)** or 
+    an equivalent. The returned results are independent of mode that was used
+    at the time of the last evaluation.
     
    :param: signal_ref - reference signal value
    :param: signal  - current measured signal value
