@@ -152,8 +152,7 @@ Interface
     
     Returns tuple form of the components of the PID equation
     *since last evaluation* that was initiated by calling **getPid(...)** or 
-    an equivalent. The returned results are independent of mode that was used
-    at the time of the last evaluation.
+    an equivalent. 
     
     :param: signal_ref - reference signal value
     :param: signal  - current measured signal value
