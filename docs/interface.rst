@@ -53,7 +53,7 @@ Interface
  .. method:: setTimeinc(time_inc)
 
     Sets the discrete timestep increment value used in integrative
-    calculations. **time_inc** can be any positive value  Set the **time_inc** unit
+    calculations. **time_inc** can be any positive value.  Set the **time_inc** unit
     of measurement to be the same unit as the sample rate of current signal. This 
     value can be changed dynamically while the controller is running to adjust to 
     changes in the frequency of the input signal if necessary.
