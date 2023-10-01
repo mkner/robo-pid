@@ -84,6 +84,7 @@ Interface
    :param:  Kd - integral gain
    :return: None
 
+
  .. method:: getGains()
 
       returns the tuple (Kp, Ki, Kd)
@@ -94,8 +95,6 @@ Interface
     sets the proportional gain **Kp**
 
     :param: Kp - the proportional gain
-
-        sets Kp
 
 
  .. method:: getKp()
@@ -116,7 +115,7 @@ Interface
  .. method:: getKi()
 
     get the current integral gain **Ki**
- 
+
      :return: Ki
      :rtype: float
 
