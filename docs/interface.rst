@@ -7,17 +7,18 @@ Interface
 
  .. method:: reset()
 
-  Resets for new controller run. Clears out integrations
-  but keeps gains intact
+  Resets the controller for a new run. Clears out integration
+  results but keeps the currently set gains intact.
 
   :param: None
   :return: None
 
+
  .. method:: resetAll()
        
-  Resets all internal variables to the the object instance 
-  initialization state. Gains & timestep increment are also
-  set to default values.
+  Resets all runtime variables to the the object instance 
+  initialization state.  Gains and timestep increment values are also
+  set to default values. Previous integration results are cleared.
 
   :param: None
   :return: None
