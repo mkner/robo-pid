@@ -10,6 +10,9 @@ Interface
   Resets for new controller run. Clears out integrations
   but keeps gains intact.
 
+  :param: None
+  :return: None
+  :rtype: None
 
  .. method:: resetAll()
        
