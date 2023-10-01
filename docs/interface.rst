@@ -72,23 +72,28 @@ Interface
   
  .. method:: setGains(Kp,Ki,Kd)
         
-      sets the gains:
+    sets the gains:
 
-        Kp - proportional gain
-
-        Ki - integral gain
-
-        Kd - derivative gain
+     | Kp - proportional gain
+     | Ki - integral gain
+     | Kd - derivative gain
 
    :param: Kp - proportional gain
-   :param:  Ki - integral gain
-   :param:  Kd - integral gain
+   :param: Ki - integral gain
+   :param: Kd - integral gain
    :return: None
 
 
  .. method:: getGains()
 
-      returns the tuple (Kp, Ki, Kd)
+    get the currently set gains 
+
+    | Kp - proprotional gain
+    | Ki - integral gain
+    | Kd - derivative gain
+
+    :return: the gains (Kp, Ki, Kd)
+    :rtype: tuple
 
 
  .. method:: setKp(Kp)
@@ -102,8 +107,8 @@ Interface
 
     get the current proportional gain **Kp**
  
-     :return: Kp
-     :rtype: float
+    :return: Kp
+    :rtype: float
 
 
  .. method:: setKi(Ki)
@@ -117,8 +122,8 @@ Interface
 
     get the current integral gain **Ki**
 
-     :return: Ki
-     :rtype: float
+    :return: Ki
+    :rtype: float
 
 
  .. method:: setKd(Kd):
