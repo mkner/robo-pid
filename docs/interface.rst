@@ -96,7 +96,7 @@ Interface
      returns Ki
 
 
- .. method:: setKd():
+ .. method:: setKd(Kd):
 
        sets Kd
 
@@ -108,14 +108,15 @@ Interface
 
  .. method:: getPid(signal_ref, signal)
 
-    signal_ref - reference signal value
-
-    signal  - current measured signal value
-
-   Returns the results of the PID equation evaluation since the last call
-   to this function. It is usually called each time_step interval that is
+   Returns the results of the PID equation evaluation *since the last* call
+   to this function. It is usually called each **time_step** interval that is
    also synced to the measured signal that samples at the same time interval
    Calculation & persistent values depend on mode
+  
+   :param: signal_ref - reference signal value
+   :param signal  - current measured signal value
+   :return: result of PID equation eval
+   :rtype: float
 
 
  .. method::  getPidTuple(signal_ref, signal)
