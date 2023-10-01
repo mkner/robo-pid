@@ -103,14 +103,17 @@ Interface
 
  .. method:: getKd()
 
-        returns Kd
+       get the current proportional gain **Kd**
+    
+   :return: Kd 
+   :rtype: float
 
 
  .. method:: getPid(signal_ref, signal)
 
    Returns the results of the PID equation evaluation *since the last* call
    to this function. It is usually called each **time_step** interval that is
-   also synced to the measured signal that samples at the same time interval
+   also synced to the measured signal that samples at the same time interval.
    Calculation & persistent values depend on mode
   
    :param: signal_ref - reference signal value
@@ -128,14 +131,15 @@ Interface
    :param: signal  - current measured signal value
    :return: components of PID equation evaluation (Kp P, Ki, I, Kd, D)
 
-            Kp - proprotional gain
-            P  - result of proportional term evaluation
-            Ki - integral gain
-            I  - result of integral term evaluation
-            Kd - derivative gain
-            D  - result of derivative term evaluation
+     |  Kp - proprotional gain
+     |  P  - result of proportional term evaluation
+     |  Ki - integral gain
+     |  I  - result of integral term evaluation
+     |  Kd - derivative gain
+     |  D  - result of derivative term evaluation
 
    :rtype: tuple
+
 
  .. method::  pid(signal_ref, signal)
    
