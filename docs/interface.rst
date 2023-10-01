@@ -77,13 +77,20 @@ Interface
 
 
  .. method:: setKp(Kp)
+ 
+     sets the proportional gain **Kp**
+
+    :param: Kp - the proportional gain
 
         sets Kp
 
 
  .. method:: getKp()
 
-        returns Kp   
+    get the current proportional gain **Kp**
+ 
+     :return: Kp
+     :rtype: float
 
 
  .. method:: setKi(Ki)
@@ -132,7 +139,7 @@ Interface
  .. method::  getPidTuple(signal_ref, signal)
     
     Returns tuple form of the components of the PID equation
-    **since last evaluation** that was initiated by calling **getPid(...)** or 
+    *since last evaluation* that was initiated by calling **getPid(...)** or 
     an equivalent. The returned results are independent of mode that was used
     at the time of the last evaluation.
     
