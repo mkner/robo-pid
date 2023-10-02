@@ -176,12 +176,12 @@ Interface
 
  .. method::  pid(signal_ref, signal)
    
-    short form for getPid(signal_ref, signal)
+    short form for **getPid(...)**
     
 
  .. method::  get(signal_ref, signal)
 
-    short form for getPid(signal_ref, signal)
+    short form for **getPid(...)**
 
 
 
