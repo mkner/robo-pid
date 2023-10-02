@@ -80,7 +80,7 @@ Interface
 
    :param: Kp - proportional gain
    :param: Ki - integral gain
-   :param: Kd - integral gain
+   :param: Kd - derivative gain
    :return: None
 
 
