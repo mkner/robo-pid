@@ -1,6 +1,6 @@
 **basic-pid** 
 
-A Python PID controller for discretized time.
+A Basic Python PID Controller For Discrete Time Regulators
 
 **Basic PID** is a classic PID controller that is easy to use, works and does the job.
 
