@@ -2,7 +2,7 @@
 About
 *****
 
-A Python PID controller for discretized time.
+A Python PID controller for discrete time regulators
 
 **Basic PID** is a classic PID controller that is easy to use, works and does the job.
 
