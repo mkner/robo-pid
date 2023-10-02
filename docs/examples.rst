@@ -44,7 +44,7 @@ Wheel-Motor Velocity Controller
   # (c) 2023, 2022 - Mike Knerr
   #
 
-  from robotime import Clock
+  from robotime.clocks import Clock
   from basicpid import BasicPid
   
 
