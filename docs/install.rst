@@ -17,7 +17,7 @@ To install a specific pre-release test version for example
 
 .. code-block:: console
 
-   $ pip install -i https://test.pypi.org/simple/ basic-pid==0.1.10a
+   $ pip install -i https://test.pypi.org/simple/ basic-pid==0.2.4
 
 
 
