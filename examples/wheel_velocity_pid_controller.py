@@ -96,7 +96,7 @@ class WheelVelocity(IoScan):
         if self._v_ref < 0:
             self._pid_out = self.pid.getPid(abs(self._v_ref), abs(self._v_avg)) #,time
         
-        # similar to technique used w/ stanley simulator
+        # similar to technique used w/ stanley AV simulator
         # for throttle control signal
         # pid in iterative mode for timestep discretized version
         self._rate_pid = self._rate_prev + self._pid_out
