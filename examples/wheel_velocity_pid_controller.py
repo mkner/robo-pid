@@ -1,6 +1,6 @@
 
 #
-#  Basic Python PID Controller
+#  RoboPid Python PID Controller for Mobile Robotics
 #
 # example of wheel/motor velocity PID control
 # using controller in timestep iterative mode
@@ -15,6 +15,10 @@
 # in milliseconds with the call clock.millis()
 #
 
+from robotime.clocks import Clock
+from robotime.time import delay 
+from robopid import RoboPid
+
 class WheelVelocity(IoScan):
 
     def __init__(self, wheel):#, velocity):
@@ -22,10 +26,11 @@ class WheelVelocity(IoScan):
 
         self._name = "WheelVelocity"
         self._desc = "WheelVelocity"
-        self._vers = "v0.01.01"  # 0.09 w/ velocity
-        self._wheel = wheel #motor = motor  # Motor()
+        self._vers = "v0.01.02"  # x,y.02 for RoboPid
+        self._wheel = wheel #construct with existing active wheel object
         
-        self.pid = BasicPid() # on ext interface
+        self.pid = RoboPid() # on ext interface
+        self.clock = Clock() # uptime & timing clock 
         
         self._v_ref = 0 # signal reference velocity
         self._v = 0 # current instantaneous velocity
@@ -38,7 +43,7 @@ class WheelVelocity(IoScan):
         self._rate_prev = 0
         self._rate_pid = 0
     
-        self._vmax = 0.50 # of wheels/motors
+        self._vmax = 0.50 # max velocity (m/s) of wheels 
         
         self._default_scanfreq = 50
         self._default_bufsize = 5
