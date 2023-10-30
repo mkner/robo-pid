@@ -1,11 +1,11 @@
 
 # the usual
 
-import basic_pid
+import robopid
 
-from basic_pid import BasicPid
+from robopid import RoboPid
 
-p = BasicPid()
+p = RoboPid()
 
 p.name()
 
