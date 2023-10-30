@@ -8,24 +8,25 @@ Using the module
 
 For example:
 
->>> import basicpid
+>>> import robopid
 
->>> p = basicpid.BasicPid()
+>>> p = robopid.RoboPid()
 
 Or just:
 
->>> from basicpid import Pid
+>>> from robopid import Pid
 
 >>> p = Pid()
 
 >>> p.name()
-'BasicPid'
+'...'
 
 >>> p.vers()
-'v0.01.10a'
+'...'
 
 >>> p.desc()
-'Basic Discrete Time PID Controller'
+'...'
+
 
 Wheel-Motor Velocity Controller
 *******************************
