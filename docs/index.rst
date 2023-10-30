@@ -1,9 +1,10 @@
 
-basic-pid
+robo-pid
 *********
 
-
-A classic PID controller for discretized time regulators that is is easy to use, works and does the job.
+A Python PID Controller for mobile robotics that can handle the combined kinematic
+and dynamic complexity of differential drive linear and lateral wheeled motion control
+using discretized timestop integration techniques
 
 .. toctree::
    :maxdepth: 1
