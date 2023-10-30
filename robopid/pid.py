@@ -1,24 +1,23 @@
 #
 #
-# BasicPid - Basic Python PID Controller  
-# for discretized time regulators
+# RoboPid - Python PID Controller Mobile Robotics
+# and discretized time regulators
 #
-# (c) 2023, 2022  Mike Knerr
+# (c) 2022-2023  Mike Knerr
 #
 #
 
 from robobase import Object # as of 9/5
 
-#from robo_base import Object
 
-class BasicPid(Object):
-     """Basic Python PID Controller """ 
+class RoboPid(Object):
+     """Python PID Controller For Mobile Robotics""" 
      def __init__(self):
-       super(BasicPid, self).__init__()
-       self._name = "BasicPid"
-       self._desc = "Basic Discrete Time PID Controller"
-       self._vers = "v0.02.03 <-- ... v0.01.11b1"  #"v0.01.11b1 from dev v0.01.07b"
-       self._about = "Basic Pid"
+       super(RoboPid, self).__init__()
+       self._name = "RoboPid"
+       self._desc = "Mobile Robotic Discrete Time PID Controller"
+       self._vers = "v0.02.05
+       self._about = "RoboPid is a Mobile Robotic Discrete Time PID Controller"
           
        self._Kp = 1.0
        self._Ki = 0
