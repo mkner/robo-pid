@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "PID Controller for Discrete Time"
-copyright = "(c) 2023 Mike Knerr"
+project = "PID Controller For Mobile Robotics"
+copyright = "(c) 2022-2023 Mike Knerr"
 author = ""
 
 
