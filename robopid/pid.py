@@ -1,6 +1,6 @@
 #
 #
-# RoboPid - Python PID Controller Mobile Robotics
+# RoboPid - Python PID Controller for Mobile Robotics
 # and discretized time regulators
 #
 # (c) 2022-2023  Mike Knerr
