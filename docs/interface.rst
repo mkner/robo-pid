@@ -2,7 +2,7 @@
 Interface
 ---------
 
-.. class:: BasicPid()
+.. class:: RoboPid()
 
 
  .. method:: reset()
