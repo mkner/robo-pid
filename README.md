@@ -1,13 +1,13 @@
-**basic-pid** 
+**robo-pid** 
 
-A Basic Python PID Controller For Discrete Time Regulators
+A Python PID Controller For Mobile Robotic Regulators
 
-**Basic PID** is a classic PID controller that is easy to use, works and does the job.
+**Robo PID** is a PID controller designed for Mobile Robotics
 
 The PID controller implements timestep integration
 that is designed to be used in discretized time regulators.
 
-**Basic PID** has proven to be a tested, and reliable PID controller. It has been used, for example, 
+**Robo PID** has proven to be a tested, and reliable PID controller. It has been used, for example, 
 with mobile robotic systems for LVC (Linear Velocity Control) for regulating wheel velocities, 
 LVDR (Lateral Velocity Differential Regulator) for keeping the wheel velocities in sync for 
 differential drive mobile robots when traversing a straight line path and 
@@ -27,9 +27,9 @@ as the current input signal.
 
 Installation: 
 
-$ **pip** install basic-pid
+$ **pip** install robo-pid
 
-For documentation see https://basic-pid.readthedocs.io/en/latest/
+For documentation see https://robo-pid.readthedocs.io/en/latest/
 
 
 
