@@ -33,8 +33,6 @@ Wheel-Motor Velocity Controller
 
 .. code-block:: python
 
-  #### INDENT HERE
-  ########
   #
   #
   #  RoboPid - Python PID Controller for Mobile Robotics
