@@ -19,13 +19,14 @@ Or just:
 >>> p = Pid()
 
 >>> p.name()
-'...'
+RoboPid
 
 >>> p.vers()
-'...'
+v0.02.05
 
->>> p.desc()
-'...'
+>>> p.whoami()
+RoboPid v0.02.05 
+
 
 
 Wheel-Motor Velocity Controller
