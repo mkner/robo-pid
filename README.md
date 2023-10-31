@@ -3,7 +3,7 @@
 A Python PID Controller For Mobile Robotics
 
 **Robo PID** is a PID controller designed for Autonomous Mobile Robots
-that can handle the combined kinematic and dynamic complexity of differential drive
+to handle the combined kinematic and dynamic complexity of differential drive
 linear and lateral wheeled motion control. The controller implements timestep
 integration that can be used in discretized time regulators.
 
