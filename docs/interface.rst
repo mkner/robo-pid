@@ -4,71 +4,6 @@ Interface
 
 .. class:: RoboPid()
 
-
- .. method:: reset()
-
-  Resets the controller for a new run. Clears out integration
-  results but keeps the currently set gains and mode parameters intact.
-
-  :param: None
-  :return: None
-
-
- .. method:: resetAll()
-       
-  Resets all runtime variables to the the object instance 
-  initialization state.  Gains and timestep increment values are also
-  set to default values. Previous integration results are cleared.
-
-  :param: None
-  :return: None
-
-
- .. method:: setIntegrateModeOn()
-
- Sets integrative mode on
-
-
- .. method:: setIterateModeOn()
-
- Sets iteration mode on
-
-
- .. method:: inIntegrateMode()
-
-    check if using integrative mode for PID evaluation
-
-    :return: **True** if in integrative mode and **False** if not
-    :rtype: Bool
-
-
- .. method:: inIterateMode()
-
-    check if using iterative mode for PID evaluation
-
-    :return: **True** if in iterative mode and **False** if not
-    :rtype: Bool
-
-
- .. method:: setTimeinc(time_inc)
-
-    Sets the discrete timestep increment value used in integrative
-    calculations. **time_inc** can be any positive value.  Set the **time_inc** unit
-    of measurement to be the same unit as the sample rate of current signal. This 
-    value can be changed dynamically while the controller is running to adjust to 
-    changes in the frequency of the input signal if necessary.
-
-   :param: time_inc
-   :return: None
-
-
- .. method:: getTimeinc()
-
-    returns the current discrete timestep increment value
-
-    :param: None
-    :return: time_inc
-   
   
  .. method:: setGains(Kp,Ki,Kd)
         
@@ -141,6 +76,52 @@ Interface
     :rtype: float
 
 
+ .. method:: setIntegrateModeOn()
+
+ Sets integrative mode on
+
+
+ .. method:: setIterateModeOn()
+
+ Sets iteration mode on
+
+
+ .. method:: inIntegrateMode()
+
+    check if using integrative mode for PID evaluation
+
+    :return: **True** if in integrative mode and **False** if not
+    :rtype: Bool
+
+
+ .. method:: inIterateMode()
+
+    check if using iterative mode for PID evaluation
+
+    :return: **True** if in iterative mode and **False** if not
+    :rtype: Bool
+
+
+ .. method:: setTimeinc(time_inc)
+
+    Sets the discrete timestep increment value used in integrative
+    calculations. **time_inc** can be any positive value.  Set the **time_inc** unit
+    of measurement to be the same unit as the sample rate of current signal. This 
+    value can be changed dynamically while the controller is running to adjust to 
+    changes in the frequency of the input signal if necessary.
+
+   :param: time_inc
+   :return: None
+
+
+ .. method:: getTimeinc()
+
+    returns the current discrete timestep increment value
+
+    :param: None
+    :return: time_inc
+   
+
  .. method:: getPid(signal_ref, signal)
 
    Returns the results of the PID equation evaluation *since the last* call
@@ -183,5 +164,24 @@ Interface
 
     short form for **getPid(...)**
 
+
+
+ .. method:: reset()
+
+  Resets the controller for a new run. Clears out integration
+  results but keeps the currently set gains and mode parameters intact.
+
+  :param: None
+  :return: None
+
+
+ .. method:: resetAll()
+       
+  Resets all runtime variables to the the object instance 
+  initialization state.  Gains and timestep increment values are also
+  set to default values. Previous integration results are cleared.
+
+  :param: None
+  :return: None
 
 
