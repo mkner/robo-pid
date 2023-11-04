@@ -78,12 +78,27 @@ Interface
 
  .. method:: setIntegrateModeOn()
 
- Sets integrative mode on
+    Turns integrative mode on
+
+    In integrative mode, the timestep integration is done inside the controller
+    and the output from the PID controller for the current timestep is used directly
+    or with modifications to be sent to the device or process plant as the current input signal.
+
+    :param: None
+    :return: None
 
 
  .. method:: setIterateModeOn()
 
- Sets iteration mode on
+    Sets iteration mode on
+
+    In iterative mode, the timestep integrations for updating an input
+    signal is manually calculated and updaated outside the controller 
+    in the algorithm ***that calls*** the PID controller for the ouput
+    of the PID at the current timestep.
+
+    :param: None
+    :return: None
 
 
  .. method:: inIntegrateMode()
