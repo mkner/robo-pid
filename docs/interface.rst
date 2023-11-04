@@ -80,9 +80,11 @@ Interface
 
     Turns integrative mode on
 
-    In integrative mode, the timestep integrations are done inside the controller
-    and the output from the PID controller for the current timestep is used directly
-    or with modifications to be sent to the device or process plant as the current input signal.
+    In integrative mode, the timestep integrations are done inside the
+    controller and the output from the PID controller for the current timestep
+    is used directly or with modifications and sent to the device or process
+    plant as the current input signal. The integrations are cumulative across 
+    all timesteps until the PID controller is restarted with **reset()** or **resetAll()**
 
     :param: None
     :return: None
@@ -94,10 +96,10 @@ Interface
 
     In iterative mode, the PID timestep integrations are manually calculated
     and updated outside the controller in the algorithm **that calls** the
-    PID controller for the ouput of the PID at the current timestep to be sent
+    PID controller for the output of the PID at the current timestep to be sent
     to a device or process plant as an input signal. The output of the PID
-    is localized to **this** timestep and not cumalative across all calls for
-    the PID output.
+    is localized to **this** timestep and not cumulative across all calls for
+    the PID output since the start of the controller or last reset.
 
     :param: None
     :return: None
