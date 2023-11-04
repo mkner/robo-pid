@@ -80,7 +80,7 @@ Interface
 
     Turns integrative mode on
 
-    In integrative mode, the timestep integrations are done inside the
+    In integrative mode, the timestep integrations are calculated inside the
     controller and the output from the PID controller for the current timestep
     is used directly or with modifications and sent to the device or process
     plant as the current input signal. The integrations are cumulative across 
