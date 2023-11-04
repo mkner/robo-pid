@@ -103,8 +103,8 @@ Interface
     algorithm that is using the PID controller and then sent to the device or
     process plant as an input signal. 
     
-    :param: None
-    :return: None
+   :param: None
+   :return: None
 
 
  .. method:: inIntegrateMode()
