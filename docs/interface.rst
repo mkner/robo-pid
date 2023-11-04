@@ -99,7 +99,7 @@ Interface
     PID controller for the output of the PID at the current timestep. The output of
     the PID is localized to **this** timestep and not cumulative across all calls for
     the PID output since the start or restart of the controller by calling **reset()** 
-    or **resetAll()**. The accumalative effect of the PID is handled by the functional 
+    or **resetAll()**. The accumulative effect of the PID is handled by the functional 
     algorithm that is using the PID controller and then sent to the device or
     process plant as an input signal. 
     
