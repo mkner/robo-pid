@@ -145,10 +145,12 @@ Interface
 
  .. method:: getPid(signal_ref, signal)
 
-   Returns the results of the PID equation evaluation *since the last* call
+   Returns the results of the PID equation evaluation **since the last** call
    to this function. It is usually called at each timestep interval that is
-   also synced to the measured signal that samples at the same timestep
-   interval frequency. Calculation & persistent values depend on mode
+   synced to the measured signal that samples at the same timestep
+   interval frequency. Calculation, accumulative and persistent values 
+   depend on the mode setting.
+   
   
    :param: signal_ref - reference signal value
    :param: signal  - current measured signal value
