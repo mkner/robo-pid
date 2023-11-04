@@ -92,10 +92,12 @@ Interface
 
    Turns iteration mode on
 
-    In iterative mode, the timestep integrations for updating an input
-    signal are manually calculated and updated outside the controller 
-    in the algorithm **that calls** the PID controller for the ouput
-    of the PID at the current timestep.
+    In iterative mode, the PID timestep integrations are manually calculated
+    and updated outside the controller in the algorithm **that calls** the
+    PID controller for the ouput of the PID at the current timestep to be sent
+    to a device or process plant as an input signal. The output of the PID
+    is localized to **this** timestep and not cumalative across all calls for
+    the PID output.
 
     :param: None
     :return: None
