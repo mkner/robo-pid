@@ -11,13 +11,13 @@ from robobase import Object # as of 9/5
 
 
 class RoboPid(Object):
-     """Python PID Controller For Mobile Robotics""" 
+     """PID Controller For Mobile Robotics""" 
      def __init__(self):
        super(RoboPid, self).__init__()
        self._name = "RoboPid"
        self._desc = "Mobile Robotic Discrete Time PID Controller"
-       self._vers = "v0.02.05"
-       self._about = "RoboPid is a Mobile Robotic Discrete Time PID Controller"
+       self._vers = "v0.02.06"
+       self._about = "RoboPid is a obile Robotic Discrete Time PID Controller"
           
        self._Kp = 1.0
        self._Ki = 0
