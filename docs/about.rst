@@ -25,7 +25,7 @@ from the PID controller for the current timestep is used directly or with modifi
 to the device or process plant as the current input signal without further iterative integration.
 
 In **Iterative Mode**, the PID timestep integrations are manually calculated and updated
-outsidethe controller in the algorithm that calls the PID controller for the output 
+outside the controller in the algorithm that calls the PID controller for the output 
 of the PID at the current timestep.
 
 
