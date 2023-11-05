@@ -15,9 +15,9 @@ class RoboPid(Object):
      def __init__(self):
        super(RoboPid, self).__init__()
        self._name = "RoboPid"
-       self._desc = "Mobile Robotic Discrete Time PID Controller"
+       self._desc = "PID controller for Autonomous Mobile Robots"
        self._vers = "v0.02.06"
-       self._about = "RoboPid is a obile Robotic Discrete Time PID Controller"
+       self._about = "RoboPid is a discretized time PID controller for mobile robotics"
           
        self._Kp = 1.0
        self._Ki = 0
