@@ -7,7 +7,7 @@ and dynamic complexity of mobile robotics. The controller implements timestep
 integration that can be used in discretized time regulators.
 
 
-**Robo PID** has proven to be a tested, reliable PID controller that can
+**RoboPID** has proven to be a tested, reliable PID controller that can
 regulate the dynamic balance and rapid response required for differential drive
 linear and lateral wheeled motion control. It has been used, for example with mobile
 robotic systems for LVC (Linear Velocity Control) for regulating wheel velocities, 
