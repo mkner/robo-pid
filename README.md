@@ -2,13 +2,15 @@
 
 A Python PID Controller For Mobile Robotics
 
-**Robo PID** is a PID controller designed for Autonomous Mobile Robots
-to handle the combined kinematic and dynamic complexity of differential drive
-linear and lateral wheeled motion control. The controller implements timestep
+**RoboPID** is Python PID Controller that can handle the combined kinematic 
+and dynamic complexity of mobile robotics. The controller implements timestep
 integration that can be used in discretized time regulators.
 
-**Robo PID** has proven to be a tested, and reliable PID controller. It has been used, for example, 
-with mobile robotic systems for LVC (Linear Velocity Control) for regulating wheel velocities, 
+
+**Robo PID** has proven to be a tested, reliable PID controller that can
+regulate the dynamic balance and rapid response required for differential drive
+linear and lateral wheeled motion control. It has been used, for example with mobile
+robotic systems for LVC (Linear Velocity Control) for regulating wheel velocities, 
 LVDR (Lateral Velocity Differential Regulator) for keeping the wheel velocities in sync for 
 differential drive mobile robots when traversing a straight line path and 
 ADVR (Angular Differential Velocity Regulator) for tracking a heading angle using typical
