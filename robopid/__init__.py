@@ -7,7 +7,7 @@ robo-pid - PID Controller for Mobile Robotics
 # note: pep versions like > 'x.y.<number>[a-c]<digit>'
 # for example: 0.01.08d doesnt fly building from pyproject.toml
 
-__version__ = 'v0.02.06'
+__version__ = 'v0.02.06a'
 
 # import acts to export 
 
