@@ -19,12 +19,12 @@ motion control input signals (v,w) for linear velocities and angular orientation
 
 The PID controller supports 2 modes of operation: **Integrative** and **Iterative**
 
-In **integrative mode**, the timestep integrations are calculated inside the controller
+In **Integrative Mode**, the timestep integrations are calculated inside the controller
 and the output from the PID controller for the current timestep is used directly or with 
 modifications and sent to the device or process plant as the current input signal without
 further iterative integration.
 
-In **iterative mode**, the PID timestep integrations are manually calculated and updated
+In **Iterative Mode**, the PID timestep integrations are manually calculated and updated
 outside the controller in the algorithm that calls the PID controller for the output of
 the PID at the current timestep.
 
