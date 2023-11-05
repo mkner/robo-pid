@@ -14,7 +14,7 @@ robotic systems for LVC (Linear Velocity Control) for regulating wheel velocitie
 LVDR (Lateral Velocity Differential Regulator) for keeping the wheel velocities in sync for 
 differential drive mobile robots when traversing a straight line path and 
 ADVR (Angular Differential Velocity Regulator) for tracking a heading angle using typical
-motion control input signals (v,w) for linear velocities & angular orientation rotational rates.
+motion control input signals (v,w) for linear velocities and angular orientation rotational rates.
 
 It supports 2 modes of operation: **Integrative** and **Iterative**
 
