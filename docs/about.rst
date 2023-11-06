@@ -2,10 +2,6 @@
 About
 *****
 
-**robo-pid** 
-
-A Python PID Controller For Mobile Robotics
-
 **RoboPID** is a PID Controller designed to handle the combined kinematic and dynamic complexity
 of autonomous mobile robotics. The controller implements timestep integration and can be used
 in discretized time regulators.
