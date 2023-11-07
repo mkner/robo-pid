@@ -123,7 +123,7 @@ Wheel-Motor Velocity Controller
               self._v_avg = self._v
               
           #set timestep always, it can change dynamically
-          time_inc_sec = self.getTimeinc()/1000
+          time_inc_sec = self.getTimeinc()/1000 # in seconds to match meters/sec
           self.pid.setTimeinc(time_inc_sec)
           
           if self._v_ref > 0:
