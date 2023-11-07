@@ -1,4 +1,3 @@
-**robo-pid** 
 
 A Python PID Controller For Mobile Robotics
 
