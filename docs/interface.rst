@@ -153,7 +153,7 @@ Interface
    
   
    :param: signal_ref - reference signal value
-   :param: signal  - current measured signal value
+   :param: signal  - current measured signal value returned by process 
    :return: result of PID equation eval
    :rtype: float
 
