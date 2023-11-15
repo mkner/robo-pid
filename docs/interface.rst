@@ -165,7 +165,7 @@ Interface
     an equivalent. 
     
     :param: signal_ref - reference signal value
-    :param: signal  - current measured signal value
+    :param: signal  - current measured signal value returned by process 
     :return: components of PID equation evaluation (Kp P, Ki, I, Kd, D)
 
      |  Kp - proprotional gain
