@@ -39,8 +39,7 @@ to be installed for the timing and delay functions.
 
     $ pip install robo-time
 
-For **robotime** documentation 'see <https://robo-time.readthedocs.io/en/latest/>'_
-
+For **robotime** documentation `see <https://robo-time.readthedocs.io/en/latest/>`_
 
 Getting around...
 
