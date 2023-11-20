@@ -31,11 +31,11 @@ RoboPid v0.02.05
 
 Mode Examples
 *************
-
 The following examples require **robotime**
 to be installed for the timing and delay functions.
 
-See **robotime** `documentation <https://robo-time.readthedocs.io/en/latest/>`_ for more
+See `documentation <https://robo-time.readthedocs.io/en/latest/>`_ for more.
+Install as follows
 
 .. code-block:: console
 
