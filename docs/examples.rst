@@ -35,11 +35,12 @@ Mode Examples
 The following examples require **robotime**
 to be installed for the timing and delay functions.
 
+See **robotime** `documentation <https://robo-time.readthedocs.io/en/latest/>`_ for more
+
 .. code-block:: console
 
     $ pip install robo-time
 
-For **robotime** documentation `see <https://robo-time.readthedocs.io/en/latest/>`_
 
 Getting around...
 
