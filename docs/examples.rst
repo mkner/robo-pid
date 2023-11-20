@@ -1,7 +1,7 @@
 
 
-Example
--------
+Examples
+--------
 
 Using the module
 ****************
