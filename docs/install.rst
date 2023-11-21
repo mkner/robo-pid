@@ -10,7 +10,7 @@ To use this project, first install it using **pip**:
     $ pip install robo-pid
 
 
-The main python package download site is: `here <https://pypi.org/project/robo-pid/>`_
+The main python package download site is `here <https://pypi.org/project/robo-pid/>`_
 
 Note that the install requires **robo-base** to be installed first. This is usually flagged as a 
 dependency when installing using **pip**. If not then manually install.
