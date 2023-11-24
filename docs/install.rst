@@ -20,6 +20,8 @@ dependency when installing using **pip**. If not then manually install.
     $ pip install robo-base
 
 
+A changelog is available `here <https://github.com/mkner/robo-pid/blob/main/changelog/>`_
+
 
 
 
