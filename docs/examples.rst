@@ -31,7 +31,9 @@ RoboPid v0.02.05
 
 Mode Examples
 *************
-The examples need **robotime**
+
+
+Some examples need **robotime**
 to be installed for the timing and delay functions.
 
 See `documentation <https://robo-time.readthedocs.io/en/latest/>`_ for more.
@@ -40,6 +42,16 @@ Install as follows
 .. code-block:: console
 
     $ pip install robo-time
+
+Also some examples need **roboutils**
+to be installed for mapping, bounding, trigonometric and other related functions
+
+See `documentation <https://robo-utils.readthedocs.io/en/latest/>`_ for more.
+Install as follows
+
+.. code-block:: console
+
+    $ pip install robo-utils
 
 
 Getting around...
