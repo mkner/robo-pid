@@ -222,13 +222,11 @@ calls to **pid.get(...)**
     0.025
     0.025
     0.025
-
-
 A great way to quickly see what type of control is necessary and what
 possible complexity will be required of the PID controller for the process device it is being
 designed for is to start off with the PID controller in **Integrate Mode**.
 Then concentrate on fine tuning the gains. Sometimes this may be enough. If not, 
-since there is already working knowledge of the process and it responses, the PID 
+since there is already working knowledge of the process and its responses, the PID 
 controller can be switched into **Iterate Mode** and algorithms and code can be developed
 to acheive the optimum required results.
 
@@ -247,6 +245,7 @@ regulator for the application.
   pid.reset() # 
   pid.getGains() # ck ok
 
+  # init test parameters
   ref_sig = 1.5 # tracking reference signal
   output_sig = 0.5 # output signal or measurement value from the process or device
   
@@ -275,8 +274,17 @@ is set in the automatic **Integrate Mode** as in the first example.
     pid_control = pid_iter 
     
     print(round( pid_control,10)) # the control input
-    
-    pid_out_prev = pid_iter 
+
+    # save the current control input or just the current 
+    # integrated iteration of the PID output to 
+    # update for the next timestep using the unmodified pid_iter
+    # or potentially modified pid_control. depends on the proccess
+    # control requirements and how it responds to the regulator
+    # algorithm in this loop
+
+    pid_out_prev = pid_control # or pid_iter 
+
+    # timestep interval 
     delay(500) # more realistic would be 20 ms (50 Hz) instead of 0.5 sec
 
 .. code-block:: python
@@ -296,144 +304,170 @@ is set in the automatic **Integrate Mode** as in the first example.
 Wheel-Motor Velocity Controller
 *******************************
 
+
+The motion control of Autonomous Mobile Robots (AMRs) with wheeled
+differential drive systems is one of the most complex and
+challenging in engineering. Even though the kinematics of motion given the
+typical inputs of linear velocity and orientation angular rate of change and 
+their transform into individual wheel velocities is well known, the realities
+of an actual operational mobile robot in a physical environment introduces 
+electro-mechanical dynamics and sensor feedback readings that need to be
+accurately handled by multiple interacting process control systems. 
+One of the most fundamental is the wheel velocity controller.
+
+In this example, a WheelVelocity class is derived from a I/O base class that runs a handler
+function as a background process. This type of process has a buffer and buffering
+capabilities built in. It also calls the handler function at a time interval that
+can be set and changed. A WheelVelocity object is constructed with and contains
+a Wheel object that also runs as a dynamic process. The Wheel object contains
+a wheel encoder object, and a microcontroller object that has a functional interface 
+to send signals to a microcontroller board that handles digital PWM and the 
+actual analog electrical connections to drive the physical motors.
+
+The handler function is where the PID controller is used. 
+The PID is running in **Iterate Mode** so the timestep integrations
+are handled manually and in sync with the time interval used to call
+the handler function. The velocity supplied by the Wheel object
+is read and averaged via the buffer to smooth out some of fluctuations 
+that occur with the wheel encoders and their sensors. This average is used
+for the PID as the current velocity. The buffering parameters can be 
+adjusted based on the response of the wheels and their encoders from field
+testing. While the handler is running, the reference velocity that is 
+the velocity the wheel is set to run at, can change at any time and is 
+read in sync with with current velocity reading and the PID iteration in the 
+handler function.
+
+
+The following is adapted from the working code an operational
+Autonomous Mobile Robotic system.
+
+
+
 .. code-block:: python
 
-  #
-  #
-  #  RoboPid - Python PID Controller for Mobile Robotics
-  #
-  # example of wheel/motor velocity PID control
-  # using controller in timestep iterative mode
-  #
-  # (c) 2022-2023 - Mike Knerr
-  #
-  # assume that IoScan is a class that has process thread 
-  # input signal processing & buffering capability
-  # and a component object of WheelVelocity is clock 
-  # that can return the uptime of the clock since
-  # instantiation of the WheelVelocity object 
-  # in milliseconds with the call clock.millis()
-  #
-  
   from robotime.clocks import Clock
-  from robotime.time import delay 
-  from robopid import RoboPid
-  
+  from roboutils import constrain
+  from robopid import Pid
+ 
   class WheelVelocity(IoScan):
-  
-      def __init__(self, wheel):#, velocity):
-          super(WheelVelocity, self).__init__()
-  
-          self._name = "WheelVelocity"
-          self._desc = "WheelVelocity"
-          self._vers = "v0.01.02"  # x,y.02 for RoboPid
-          self._wheel = wheel #construct with existing active wheel object
-          
-          self.pid = RoboPid() # on ext interface
-          self.clock = Clock() # uptime & timing clock 
-          
-          self._v_ref = 0 # signal reference velocity
-          self._v = 0 # current instantaneous velocity
-          self._v_avg = 0
-          
-          self._pid_out = 0
-          self._pid_out_prev = 0
-          
-          self._rate = 0
-          self._rate_prev = 0
-          self._rate_pid = 0
+
+    def __init__(self, wheel):
+        super(WheelVelocity, self).__init__()
+
+        self._name = "WheelVelocity"
+        self._desc = "WheelVelocity"
+        self._vers = "v0.01.02"  # 0.09 w/ velocity
+
+        self._wheel = wheel #contains motor 
+        self.clock = Clock()
+
+        self.pid = Pid() # on ext interface
+        
+        self._v_ref = 0 # signal reference velocity
+        self._v = 0 # current instantaneous velocity
+        self._v_avg = 0
+        
+        self._pid_out = 0
+        self._pid_out_prev = 0
+        
+        self._rate = 0
+        self._rate_prev = 0
+        self._rate_pid = 0
+    
+        self._vmax = 0.50 # of wheels/motors
+        
+        self._default_scanfreq = 50
+        self._default_bufsize = 5
+        # clock from IoScan
+        # used in interation process thread
+        self._dur_start_time = self.clock.millis()
+        self._dur = None
+     
+        #init
+        #self.deActivate()
+        self.stopScanning()
+        self.setScanFreq(self._default_scanfreq)
+        self.setBufferingOff()
+        self.setBufSize(self._default_bufsize)
+        self.setBufferingOn()
+        #important
+        self.pid.setIterateModeOn()
+        self.startScanning()
+        
+
+     # this function would be called every self.getTimeinc() timesteps
+     # by a process thread that is running in the WheelVelocity object
+     # handled by class IoScan that WheelVelocity is decendant from
+
+    def _velocity_handler(self):
+        
+        # else process signal
       
-          self._vmax = 0.50 # max velocity (m/s) of wheels 
-          
-          self._default_scanfreq = 50
-          self._default_bufsize = 5
-          # clock from IoScan
-          # used in interation process thread
-          self._dur_start_time = self.clock.millis()
-          self._dur = None
-       
-          #init
-          #self.deActivate()
-          self.stopScanning()
-          self.setScanFreq(self._default_scanfreq)
-          self.setBufferingOff()
-          self.setBufSize(self._default_bufsize)
-          self.setBufferingOn()
-          #important
-          self.pid.setIterateModeOn()
-          self.startScanning()
-          
-  #
-  # this function would be called every self.getTimeinc() timesteps
-  # by a process thread that is running in the WheelVelocity object
-  #
-  
-      def _velocity_handler(self):
-          
-          # else process signal
+        #ok, use ONLY this call from WheelVelocity object
+        self._v =  self._wheel._velocity._getVelocityGo()
+      
+        if self.isBuffering():
+              if len(self._buf) > 0 \
+                  and self._v != None: #be robust
+                self._buf.pop(0)
+                self._buf.append(self._v)
+              ## ok
+              self._v_avg  = self.getBufAvg()
+        else:
+            # really want to use  buffered velocity, 
+            self._v_avg = self._v
+            
+        #set timestep always, it can change dynamically
+        time_inc_sec = self.getTimeinc()/1000
+        self.pid.setTimeinc(time_inc_sec)
         
-          #ok, use ONLY this call from WheelVelocity object
-          self._v =  self._wheel._velocity._getVelocityGo()
+        if self._v_ref > 0:
+            self._pid_out = self.pid.getPid(self._v_ref, self._v_avg) #,time
         
-          if self.isBuffering():
-                if len(self._buf) > 0 \
-                    and self._v != None: #be robust
-                  self._buf.pop(0)
-                  self._buf.append(self._v)
-                ## ok
-                self._v_avg  = self.getBufAvg()
-          else:
-              # really want to use  buffered velocity, 
-              self._v_avg = self._v
-              
-          #set timestep always, it can change dynamically
-          time_inc_sec = self.getTimeinc()/1000 # in seconds to match meters/sec
-          self.pid.setTimeinc(time_inc_sec)
-          
-          if self._v_ref > 0:
-              self._pid_out = self.pid.getPid(self._v_ref, self._v_avg) #,time
-          
-          if self._v_ref < 0:
-              self._pid_out = self.pid.getPid(abs(self._v_ref), abs(self._v_avg)) #,time
-          
-          # similar to technique used w/ stanley AV simulator
-          # for throttle control signal
-          # pid in iterative mode for timestep discretized version
-          self._rate_pid = self._rate_prev + self._pid_out
-          
-          # rate is a speed, not a vector like velocity
-          # so it is always constrained in [1,100]
-          
-          # if there is an active signal
-          # zero is no active signal
-          
-          if self._v_ref > 0:
-              self._rate = constrain(self._rate_pid,0,100)
-              # or in [1,100]
-              #self._rate = constrain(self._rate_pid,1,100)
-             
-              if self._rate >0:
-               self._wheel.forward(self._rate)
+        if self._v_ref < 0:
+            self._pid_out = self.pid.getPid(abs(self._v_ref), abs(self._v_avg)) #,time
+        
+        # similar to technique used w/ stanley simulator
+        # for throttle control signal
+        # pid in iterative mode for timestep discretized version
+        self._rate_pid = self._rate_prev + self._pid_out
+        
+        # rate is a speed, not a vector like velocity
+        # so it is always constrained in [1,100]
+        
+        # if there is an active signal
+        # zero is no active signal
+        
+        if self._v_ref > 0:
+            self._rate = constrain(self._rate_pid,0,100)
+            # or in [1,100]
+            #self._rate = constrain(self._rate_pid,1,100)
            
-           # if there is an active signal
-          if self._v_ref < 0: 
-              # or in [1,100]
-              #self._rate = constrain(self._rate_pid,1,100)
-              #use abs of pid out for v reg <0 ?
-              self._rate = constrain(self._rate_pid,0,100)
-              
-              if self._rate >0:
-               self._wheel.reverse(self._rate)
-               
-          self._rate_prev = self._rate 
-              
-          ##########################################
-              
-          if self._dur != None:
-            if (self.clock.millis() - self._dur_start_time) > self._dur:
-                self._wheel.stop()
-                self._dur = None
-  
-          return
-      
+            if self._rate >0:
+             self._wheel.forward(self._rate)
+         
+         # if there is an active signal
+        if self._v_ref < 0:
+            # or in [1,100]
+            #self._rate = constrain(self._rate_pid,1,100)
+            #use abs of pid out for v_reg < 0?
+            self._rate = constrain(self._rate_pid,0,100)
+            
+            if self._rate >0:
+             self._wheel.reverse(self._rate)
+             
+        self._rate_prev = self._rate 
+            
+        if self._dur != None:
+          if (self.clock.millis() - self._dur_start_time) > self._dur:
+              self._wheel.stop()
+              self._dur = None
+        return
+    
+
+
+
+
+###################################
+
 
