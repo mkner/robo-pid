@@ -328,13 +328,16 @@ accurately handled by multiple interacting process control systems.
 One of the most fundamental is the wheel velocity controller.
 
 In this example, a WheelVelocity class is derived from a I/O base class that runs a handler
-function as a background process. This type of process has a buffer and buffering
+function as a background process. This type of I/O process object has a buffer and buffering
 capabilities built in. It also calls the handler function at a time interval that
-can be set and changed. A WheelVelocity object is constructed with and contains
-a Wheel object that also runs as a dynamic process. The Wheel object contains
-a wheel encoder object, and a microcontroller object that has a functional interface 
-to send signals to a microcontroller board that handles digital PWM and the 
-actual analog electrical connections to drive the physical motors.
+can be set and changed at any time. A WheelVelocity object is constructed with access to 
+a Wheel object that also runs as a dynamic process. It is the Wheel object itself that actually
+contains an instance of WheelVelocity, in addition to a wheel encoder object, and a motor object.
+It is the motor object that controls the speed and direction, either forward or reverse, for its physical
+motor. It has a functional interface to send signals to a microcontroller board
+object that handles digital PWM via an interface and connection to the actual microcontroller
+hardware that controls the analog electrical connections to drive a physical motor. 
+This code example focuses on the velocity handler only!
 
 The handler function is where the PID controller is used. 
 The PID is running in **Iterate Mode** so the timestep integrations
@@ -342,24 +345,38 @@ are handled manually and in sync with the time interval used to call
 the handler function. The velocity supplied by the Wheel object
 is read and averaged via the buffer to smooth out some of fluctuations 
 that occur with the wheel encoders and their sensors. This average is used
-for the PID as the current velocity. The buffering parameters can be 
-adjusted based on the response of the wheels and their encoders from field
-testing. While the handler is running, the reference velocity that is 
-the velocity the wheel is set to run at, can change at any time and is 
-read in sync with with current velocity reading and the PID iteration in the 
-handler function.
+for the PID as the current velocity, unless buffering has been turned off.
+The buffering parameters can be adjusted based on the response of the wheels
+and their encoders from field testing or dynamically during runtime. The reference
+velocity is the velocity the wheel is set to run at including a zero velocity
+that occurs during a stop condition. It can change at any time while the wheel is running
+and is read in sync with the PID timestep iteration interval in the handler function. 
 
 
-The following is adapted from the working code an operational
-Autonomous Mobile Robotic system.
+
+At each timestep, the PID controller uses a reference tracking velocity and the current
+measured wheel velocity, averaged or not to generate the PID output for this iteration.
+How these velocities are fed into the controller depends on whether the reference velocity 
+is positive, negative or zero. Since in **Iterate Mode**, the current timestep PID evaluation
+is calculated manually from the current PID controller output at *this* timestep and the previous
+timestep evaluation. In this case, the evauation is a rate value that will be sent to the wheel object
+as a forward or reverse signal. It is first constrained to a bounded set of values for the particular
+input range of the underlying the motor controller interface of the wheel. This is typical of either motor
+control for mobile robots or throttle controls for autonomous vehicles. Here it is the constrained
+rate that is fed back into the PID evaluation at the next timestep. Whether a modified input signal 
+to the process device, in this case a wheel and its motor controls, is recycled or the unmodified
+PID timestep equation output is used depends on the process, its performance with the controller and
+the application requirements. There is a lot of flexibilty with the **Iterate Mode** to manually 
+fine-tune the regulator and how it performs over a sequence of timestep intervals.
 
 
+This example is adapted from code in an operational Autonomous Mobile Robotic system
 
 .. code-block:: python
 
   from robotime.clocks import Clock
   from roboutils import constrain
-  from robopid import Pid
+  from basicpid import Pid
  
   class WheelVelocity(IoScan):
 
@@ -371,14 +388,15 @@ Autonomous Mobile Robotic system.
         self._vers = "v0.01.02"  # 0.09 w/ velocity
 
         self._wheel = wheel #contains motor 
-        self.clock = Clock()
+        #self.clock = Clock() #use the one from IoScan 
 
-        self.pid = Pid() # on ext interface
+        self.pid = Pid() # wheel can access PID directly from ext interface
         
         self._v_ref = 0 # signal reference velocity
         self._v = 0 # current instantaneous velocity
-        self._v_avg = 0
-        
+        self._v_avg = 0 
+
+        # init for PID in Iterate mode
         self._pid_out = 0
         self._pid_out_prev = 0
         
@@ -386,14 +404,14 @@ Autonomous Mobile Robotic system.
         self._rate_prev = 0
         self._rate_pid = 0
     
-        self._vmax = 0.50 # of wheels/motors
+        self._vmax = 0.50 # of wheels/motors usually m/s
         
-        self._default_scanfreq = 50
-        self._default_bufsize = 5
+        self._default_scanfreq = 50 # Hz
+        self._default_bufsize = 5 
         # clock from IoScan
         # used in interation process thread
-        self._dur_start_time = self.clock.millis()
-        self._dur = None
+        self._dur_start_time = self.clock.millis() 
+        self._dur = None # can be set 
      
         #init
         #self.deActivate()
@@ -468,18 +486,17 @@ Autonomous Mobile Robotic system.
             if self._rate >0:
              self._wheel.reverse(self._rate)
              
-        self._rate_prev = self._rate 
-            
-        if self._dur != None:
+        self._rate_prev = self._rate # update for next iteration
+
+        # either there is a current stop time or just continuous motion
+        if self._dur != None: 
           if (self.clock.millis() - self._dur_start_time) > self._dur:
               self._wheel.stop()
               self._dur = None
         return
     
 
-
-
-
-###################################
+##################################
+==================================
 
 
