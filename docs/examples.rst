@@ -430,8 +430,6 @@ This example is adapted from code in an operational Autonomous Mobile Robotic sy
      # handled by class IoScan that WheelVelocity is decendant from
 
     def _velocity_handler(self):
-        
-        # else process signal
       
         #ok, use ONLY this call from WheelVelocity object
         self._v =  self._wheel._velocity._getVelocityGo()
