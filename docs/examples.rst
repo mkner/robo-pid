@@ -431,7 +431,7 @@ This example is adapted from code in an operational Autonomous Mobile Robotic sy
 
     def _velocity_handler(self):
       
-        #ok, use ONLY this call from WheelVelocity object
+        #get current velocity from wheel
         self._v =  self._wheel._velocity._getVelocityGo()
       
         if self.isBuffering():
