@@ -376,7 +376,7 @@ This example is adapted from code in an operational Autonomous Mobile Robotic sy
 
   from robotime.clocks import Clock
   from roboutils import constrain
-  from basicpid import Pid
+  from robopid import Pid
  
   class WheelVelocity(IoScan):
 
