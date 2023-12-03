@@ -1,5 +1,6 @@
 # ChangeLog
 
+2023-12-03 - 0.2.6  - update documentation, python
 2023-11-27 - 0.2.6  - update RTD documentation & code for Wheel Velocity example
 2023-11-23 - 0.2.6  - update RTD documentation for Wheel Velocity example
                       add roboutils may be required for examples
