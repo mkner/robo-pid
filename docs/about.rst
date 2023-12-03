@@ -2,7 +2,7 @@
 About
 *****
 
-**RoboPID** is a PID Controller designed to handle the combined kinematic and dynamic complexity
+**RoboPID** is a PID Controller for Python designed to handle the combined kinematic and dynamic complexity
 of autonomous mobile robotics. The controller implements timestep integration and can be used
 in discretized time regulators.
 
